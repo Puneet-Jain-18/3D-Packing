@@ -1,0 +1,25 @@
+{
+  "name": "packing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "first.js",
+  "dependencies": {
+    "nodemon": "^1.19.1",
+    "read-excel-file": "^4.0.1",
+    "xlsx": "^0.14.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Puneet-Jain-18/3D-Packing.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Puneet-Jain-18/3D-Packing/issues"
+  },
+  "homepage": "https://github.com/Puneet-Jain-18/3D-Packing#readme"
+}
