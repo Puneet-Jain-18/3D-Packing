@@ -7,13 +7,17 @@ var ws=wb.Sheets[wb.SheetNames[0]];
         //////////////////////////////////
         //CHANGE VOLUME TO QUANTITY HERE//
         /////////////////////////////////
+        /////////////////////////////////////
+        //Round Off value to upper integer//
+        ////////////////////////////////////
     if (element.vol)              
         {
+            layers.add(element.height).add(element.width).add(element.length);
             data.push(element);
-            console.log(element.SKU)
             totalBoxVol=totalBoxVol+element.vol;
         }
     });
+    console.log(layers)
     crate.forEach(element=>{
         element.vol=element.x*element.y*element.z;
     })
@@ -40,13 +44,13 @@ var totalBoxVol=0.0,
         }
 ],
     dataTemp,
-    data=[];
+    data=[],
+    layers=new Set();
 
 initialize();
-
-console.log(data);
 console.log(crate[1].vol)
 module.exports={
     box:data,
     crate:crate,
+    layers:layers
 }
