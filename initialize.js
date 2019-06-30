@@ -12,12 +12,11 @@ var ws=wb.Sheets[wb.SheetNames[0]];
         ////////////////////////////////////
     if (element.vol)              
         {
-            layers.add(element.height).add(element.width).add(element.length);
+            layers.dim.add(element.height).add(element.width).add(element.length);
             data.push(element);
             totalBoxVol=totalBoxVol+element.vol;
         }
     });
-    console.log(layers)
     crate.forEach(element=>{
         element.vol=element.x*element.y*element.z;
     })
@@ -25,30 +24,24 @@ var ws=wb.Sheets[wb.SheetNames[0]];
 var totalBoxVol=0.0,
     crate=[
         {
-        x:2,
-        y:4,
-        z:6,
-        vol:0
+        x:2, y:4, z:6,vol:0
         },
         {
-        x:2,
-        y:4,
-        z:6,
-        vol:0
+        x:2,y:4,z:6,vol:0
         },
         {
-        x:2,
-        y:4,
-        z:6,
-        vol:0
+        x:2,y:4,z:6,vol:0
         }
 ],
     dataTemp,
     data=[],
-    layers=new Set();
+    layers={
+        dim:new Set(),
+        val:null
+    }
 
 initialize();
-console.log(crate[1].vol)
+layers.dim=[...layers.dim]  //spread values in set
 module.exports={
     box:data,
     crate:crate,
