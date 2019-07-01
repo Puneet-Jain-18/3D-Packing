@@ -31,7 +31,7 @@ var totalBoxVol=0.0,
         },
         {
         x:2,y:4,z:6,vol:0
-        }
+        },
 ],
     dataTemp,
     data=[],
@@ -39,11 +39,14 @@ var totalBoxVol=0.0,
         dim:new Set(),
         val:null
     }
+    
 
 initialize();
-layers.dim=[...layers.dim]  //spread values in set
+layers.dim=[...layers.dim]
+layers.dim=layers.dim.sort()  //spread values in set
 module.exports={
     box:data,
     crate:crate,
-    layers:layers
+    layers:layers,
+    totalBoxVol:totalBoxVol
 }
