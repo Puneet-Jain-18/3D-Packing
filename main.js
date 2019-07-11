@@ -6,6 +6,8 @@ console.log(data.crate.length);
 ///////////Variables//////////////
 //////////////////////////////////
 var crateIndex=0;
+var currPri=5;
+var currBoxList=[];
 
 
 
@@ -33,3 +35,15 @@ var findCrate = function(){
         };
     }
 }
+//console.log(data.box[2300]);
+
+var boxSubset= function(){
+    
+data.box.forEach(element => {
+    if(element.priority==currPri)
+    currBoxList.push(element);
+    
+});
+}
+boxSubset();
+console.log(currBoxList)
