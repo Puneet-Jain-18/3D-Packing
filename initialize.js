@@ -37,7 +37,7 @@ var totalBoxVol=0.0,
     data=[],
     layers={
         dim:new Set(),
-        val:null
+        val:[]
     }
     
 

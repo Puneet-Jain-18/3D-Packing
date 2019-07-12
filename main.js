@@ -9,14 +9,6 @@ var crateIndex=0;
 
 
 
-
-
-
-
-
-
-
-
 //////////////////////////////////
 ///////////FUNCTIONS//////////////
 //////////////////////////////////
@@ -33,3 +25,30 @@ var findCrate = function(){
         };
     }
 }
+
+var layerEval= function(){
+    data.layers.dim.forEach(element => {
+        var diff=0;
+        for(var i=0 ;i<data.box.length;i++)
+        {
+            diff=diff+ Math.min(Math.abs(element -data.box[i].height),Math.abs(element -data.box[i].width),Math.abs(element -data.box[i].length))
+        }
+        data.layers.val.push(diff);
+    });
+}
+
+var addLayer=function(){
+    var index=data.layers.val.indexOf(Math.min(...data.layers.val));
+    var layerThickness=data.layers.dim[index];
+    
+
+}
+
+
+
+
+
+//////////////////////////////////
+///////////EXECUTION//////////////
+//////////////////////////////////
+layerEval();
