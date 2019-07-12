@@ -18,19 +18,19 @@ var ws=wb.Sheets[wb.SheetNames[0]];
         }
     });
     crate.forEach(element=>{
-        element.vol=element.x*element.y*element.z;
+        element.vol=element.length*element.width*element.height;
     })
 };
 var totalBoxVol=0.0,
     crate=[
         {
-        x:2, y:4, z:6,vol:0
+        length:200, width:400, height:600,vol:0
         },
         {
-        x:2,y:4,z:6,vol:0
+        length:200,width:500,height:300,vol:0
         },
         {
-        x:2,y:4,z:6,vol:0
+        length:300,width:400,height:600,vol:0
         },
 ],
     dataTemp,

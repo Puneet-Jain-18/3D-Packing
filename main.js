@@ -33,7 +33,7 @@ var layerEval= function(){
         var diff=0;
         for(var i=0 ;i<data.box.length;i++)
         {
-            diff=diff+ Math.min(Math.abs(element -data.box[i].height),Math.abs(element -data.box[i].width),Math.abs(element -data.box[i].length))
+            diff=diff+ Math.min(Math.abs(element -data.box[i].height),Math.abs(element -data.box[i].height),Math.abs(element -data.box[i].length))
         }
         data.layers.val.push(diff);
     });
@@ -54,74 +54,87 @@ var addLayer=function(){
 ///////////EXECUTION//////////////
 //////////////////////////////////
 layerEval();
-//console.log(data.box[2300]);
 
+var setPriority=function(pri){
+    currPri=pri;
+    boxSubset();
+
+
+}
 var boxSubset= function(){
     
 data.box.forEach(element => {
     if(element.priority==currPri)
-    currBoxList.push(element);
+    {
+        currBoxList.push(element);
+    }
+    
     
 });
 }
-boxSubset();
-console.log(currBoxList)
-
 var layer= function(){
+    setPriority(4);
     var xStart=0,
-         xEnd=data.crate[crateIndex].x,
+         xEnd=data.crate[crateIndex].length,
          zStart=0;
-         zEnd=data.crate[crateIndex].z,
-        yEnd=data.crate[crateIndex].y;
+         zEnd=data.crate[crateIndex].width,
+        yEnd=data.crate[crateIndex].height;
         var best=0;
         var palArea=xEnd*zEnd;
+        console.log(palArea ,xEnd,yEnd,zEnd );
     currBoxList.forEach(element=>{
+        console.log("AREAAAAAAAAA= ",palArea);
         var or1=0,or2=0,or3=0;
-        if(element.z<=yEnd)
-         or1=Math.floor(palArea/(element.x*element.y));
-        if(element.y<=yEnd)
-         or2=Math.floor(palArea/(element.x*element.z));
-         if(element.x<=yEnd)
-         or3=Math.floor(palArea/(element.z*element.y));
-        var best=max(or1,or2,or3);
+        if(element.width<=yEnd)
+         or1=Math.floor(palArea/(element.length*element.height));
+        if(element.height<=yEnd)
+         or2=Math.floor(palArea/(element.length*element.width));
+         if(element.length<=yEnd)
+         or3=Math.floor(palArea/(element.width*element.height));
+        var best=Math.max(or1,or2,or3);
         if(best>0)
-        {var packx,packy;
+        {
+            console.log(best);
+            var packx,packy;
             var final
             if(best==or1)
                 {
                     final=or1;
-                    packx=element.x;
-                    paxky=element.z;
-                    packz=element.y;
+                    packx=element.length;
+                    packy=element.width;
+                    packz=element.height;
                 }
             else if(best==or2)
              {
                 final=or2;  
-                packx=element.x;
-                paxky=element.y;
-                paxkz=element.z;
+                packx=element.length;
+                packy=element.height;
+                packz=element.width;
                 
              } 
             else
                 {
                     final=or3;
-                    packx=element.z;
-                    paxky=element.x;
-                    paxkz=element.y;
+                    packx=element.width;
+                    packy=element.length;
+                    packz=element.height;
                 }
+                console.log(packx,packy,packz);
         ///////////////////////////
-            if(final > n)
-            {
-                console.log("SKU: "+element.SKU+" Place all "+n+" packets from x= "+xStart+" z= "+zStart );
-                console.log("In orientation x= "+packx+" y= "+packy);
+            if(final > element.quantity && xStart<xEnd &&zStart<zEnd)
+            {let n=element.quantity;
+                console.log("SKU: "+element.SKU+" Place all "+element.quantity+" packets from x= "+xStart+" z= "+zStart );
+                xStart+=Math.floor(n*packx);
+                zStart+=Math.floor(n*packz);
+                palArea=((xEnd-xStart)*(zEnd-zStart))
+                console.log("New xStart= "+xStart+" New z-start= "+zStart+" Area= "+palArea);
                 console.log(".");
-                xStart=n*packx;
-                zStart=n*packz;
-                yEnd-=packy;
             }
 
         }
 
     })
+    console.log("Remainig Gap x= ",(xEnd-xStart),(zEnd-zStart));
 }
+layer();
 
