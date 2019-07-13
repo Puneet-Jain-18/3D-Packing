@@ -148,6 +148,7 @@ for(var priIndex=10;priIndex>0;priIndex--)
                     vol+=(n*(packx*packy));
                     console.log("SKU: "+element.SKU+" Place all "+element.quantity+
                     " packets from x= "+xStart.toFixed(1)+" z= "+zStart.toFixed(1) );
+                    console.log("In Orientation X= "+packx.toFixed(1)+" Y = "+packy.toFixed(1));
                     
                     xStart+=Math.ceil(n*packx);
 
@@ -172,6 +173,7 @@ for(var priIndex=10;priIndex>0;priIndex--)
                     let n=final;
                     console.log("SKU: "+element.SKU+" Place ONLY "+n+
                     " packets from x= "+xStart.toFixed(1)+" z= "+zStart.toFixed(1) );
+                    console.log("In Orientation X= "+packx.toFixed(1)+" Y = "+packy.toFixed(1))
                     
                     xStart+=Math.ceil(n*packx);
                     vol+=(n*(packx*packy));
