@@ -11,7 +11,7 @@ currently it follows layer in layer and shelf based approach to assign places to
 3. npm install
 4. node main > output.txt
 
-output.txt file would be created where each object details could be seen
+#output.txt file would be created where each object details could be seen
   a.SKU 
   b.placement  starting position
   c.orientation in which it is placed.

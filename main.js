@@ -73,8 +73,11 @@ data.box.forEach(element => {
 });
 }
 var layer= function(){
-    var quantity=0,palletNo=0,
+    var quantity=0,palletNo=1,
     yEnd=data.crate[crateIndex].height;
+    console.log("###################################################################################")
+    console.log("Start Pallet No :",palletNo);
+    console.log("###################################################################################")
 for(var priIndex=10;priIndex>0;priIndex--)
 {
     setPriority(priIndex);
@@ -143,7 +146,8 @@ for(var priIndex=10;priIndex>0;priIndex--)
                 {
                     let n=element.quantity;
                     vol+=(n*(packx*packy));
-                    console.log("SKU: "+element.SKU+" Place all "+element.quantity+" packets from x= "+xStart+" z= "+zStart );
+                    console.log("SKU: "+element.SKU+" Place all "+element.quantity+
+                    " packets from x= "+xStart.toFixed(1)+" z= "+zStart.toFixed(1) );
                     
                     xStart+=Math.ceil(n*packx);
 
@@ -158,14 +162,16 @@ for(var priIndex=10;priIndex>0;priIndex--)
                     }
                     quantity+=1;
                     palArea=((xEnd-xStart)*(zEnd-zStart))
-                    console.log("New xStart= "+xStart+" New z-start= "+zStart+" Area= "+palArea);
+                    console.log("New xStart= "+xStart.toFixed(1)+
+                    " New z-start= "+zStart.toFixed(1)+" Area= "+palArea.toFixed(1));
                     console.log(".");
                     pFlag=1;
                 }
                 else if((zEnd-zStart)>=packz && yEnd>=packy) 
                 {
                     let n=final;
-                    console.log("SKU: "+element.SKU+" Place ONLY "+n+" packets from x= "+xStart+" z= "+zStart );
+                    console.log("SKU: "+element.SKU+" Place ONLY "+n+
+                    " packets from x= "+xStart.toFixed(1)+" z= "+zStart.toFixed(1) );
                     
                     xStart+=Math.ceil(n*packx);
                     vol+=(n*(packx*packy));
@@ -180,7 +186,9 @@ for(var priIndex=10;priIndex>0;priIndex--)
                         zHighest=0;
                     }
                     palArea=((xEnd-xStart)*(zEnd-zStart))
-                    console.log("New xStart= "+xStart+" New z-start= "+zStart+" Area= "+palArea);
+                    console.log("New xStart= "+xStart.toFixed(1)+
+                    " New z-start= "+zStart.toFixed(1)+
+                    " Area= "+palArea.toFixed(1));
                     console.log(".");
                     element.quantity-=n;
                     unpacked.push(element);
@@ -203,6 +211,11 @@ for(var priIndex=10;priIndex>0;priIndex--)
             console.log("Start Pallet No :",palletNo);
             console.log("###################################################################################")
             yEnd=data.crate[crateIndex].height;
+            data.totalBoxVol-=vol;
+            vol=0;
+            findCrate();
+            xEnd=data.crate[crateIndex].length;
+            zEnd=data.crate[crateIndex].width;
         }
         zStart=0;
         zHighest=0;
@@ -216,7 +229,7 @@ for(var priIndex=10;priIndex>0;priIndex--)
     console.log("Remaining to be packed = ", unpacked.length,currBoxList.length);
     console.log("Volume wasted = ",vol,yEnd)
     console.log(data.crate[crateIndex]);
-    console.log(palletNo,6.5*data.totalBoxVol/data.crate[crateIndex].vol);
+    console.log(palletNo,data.totalBoxVol/data.crate[crateIndex].vol);
 
 }
 layer();
