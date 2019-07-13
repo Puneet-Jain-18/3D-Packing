@@ -73,14 +73,16 @@ data.box.forEach(element => {
 });
 }
 var layer= function(){
-    setPriority(4);
+    var quantity=0,palletNo=0,
+    yEnd=data.crate[crateIndex].height;
+for(var priIndex=10;priIndex>0;priIndex--)
+{
+    setPriority(priIndex);
     findCrate();
     var xStart=0,
-         quantity=0,
          xEnd=data.crate[crateIndex].length,
          zStart=0,
          zEnd=data.crate[crateIndex].width,
-        yEnd=data.crate[crateIndex].height,
         zHighest=0,
         yHighest=0,
         palArea=xEnd*zEnd,
@@ -88,7 +90,6 @@ var layer= function(){
         vol=0,
         flag=0;
         pFlag=1;
-
     while(pFlag)
     {
         pFlag=0;
@@ -195,18 +196,27 @@ var layer= function(){
             unpacked.push(element);
         })
         yEnd-=yHighest;
+        if(yEnd<=1)
+        {
+            palletNo+=1;
+            console.log("###################################################################################")
+            console.log("Start Pallet No :",palletNo);
+            console.log("###################################################################################")
+            yEnd=data.crate[crateIndex].height;
+        }
         zStart=0;
         zHighest=0;
         xStart=0;
         yHighest=0;
         palArea=(xEnd-xStart)*(zEnd-zStart);
     }
+}
     console.log("Remainig Gap x= ",(xEnd-xStart),(zEnd-zStart));
     console.log("Total quantity packed = ",quantity);
     console.log("Remaining to be packed = ", unpacked.length,currBoxList.length);
     console.log("Volume wasted = ",vol,yEnd)
     console.log(data.crate[crateIndex]);
-    console.log(unpacked)
+    console.log(palletNo,6.5*data.totalBoxVol/data.crate[crateIndex].vol);
 
 }
 layer();
