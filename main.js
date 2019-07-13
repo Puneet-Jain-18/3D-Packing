@@ -194,7 +194,7 @@ var layer= function(){
             else
             unpacked.push(element);
         })
-    //yEnd-=yHighest;
+        yEnd-=yHighest;
         zStart=0;
         zHighest=0;
         xStart=0;
