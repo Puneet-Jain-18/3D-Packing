@@ -145,7 +145,7 @@ var layer= function(){
                 if(final >= element.quantity && (zEnd-zStart)>=packz && yEnd>=packy)
                 {
                     let n=element.quantity;
-                    vol+=(n*(packx*packy));
+                    vol+=(n*(packx*packy*packz));
                     console.log("SKU: "+element.SKU+" Place all "+element.quantity+
                     " packets from x= "+xStart.toFixed(1)+" z= "+zStart.toFixed(1) );
                     console.log("In Orientation X= "+packx.toFixed(1)+" Y = "+packy.toFixed(1));
@@ -176,7 +176,7 @@ var layer= function(){
                     console.log("In Orientation X= "+packx.toFixed(1)+" Y = "+packy.toFixed(1))
                     
                     xStart+=Math.ceil(n*packx);
-                    vol+=(n*(packx*packy));
+                    vol+=(n*(packx*packy*packz));
 
                     zHighest=Math.max(zHighest,packz)
                     yHighest=Math.max(yHighest,packy)
@@ -231,7 +231,7 @@ var layer= function(){
     console.log("Remaining to be packed = ", unpacked.length,currBoxList.length);
     console.log("Volume wasted = ",vol,yEnd)
     console.log(data.crate[crateIndex]);
-    console.log(palletNo,data.totalBoxVol/data.crate[crateIndex].vol);
+    console.log(palletNo,data.totalBoxVol,data.crate[crateIndex].vol);
 
 }
 layer();
