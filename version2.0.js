@@ -1,5 +1,4 @@
 var data=require('./initialize');     //data.box  //data.crate   //data.layers.dim   //data.totalBoxVol
-console.log(data.crate.length);
 
 
 //////////////////////////////////
@@ -73,34 +72,92 @@ data.box.forEach(element => {
 });
 }
 
-var findQuantity=function(palx,palz,elx,elz,quantity)  
+var findQuantity=function(palStx,palStz,elx,elz,quantity)  
 {
-    var fitted=0;
+
+    var fitted=0,palx=palStx,palz=palStz;
     var flag=0;
     while(palz-elz >0)
     {
+        palz+=elz; 
         while(palx-elx>0)
         {
             fitted+=1;
+            palx+=elx;
             if(fitted==quantity)
             {
                 flag=1;
                 break;
             }
-            palx+=elx;
         }
         if(flag==1)
         break;
         elx=0;
-        palz+=elz;         //could check for remaining area to be pushed as a free rectangle
+                //could check for remaining area to be pushed as a free rectangle
     }
     return ({
         quantity:fitted,
-        xEnd:palx,
-        zEnd:palz,
+        xLength:palx-palStx,
+        zlength:palz-palStz,
             })
 }
 
+var rectReplace= function(rectangles,rectIndex,element)
+{
+    var temp=rectangles[rectIndex];
+    rectangles.splice(rectIndex,1);
+    rectangles.push(
+        {
+            xStart:temp.xStart,
+            xEnd:temp.xEnd,
+            zStart:temp.zStart+element.zlength,
+            zEnd:temp.zEnd,
+            area:(temp.xEnd-temp.xStart)*(temp.zEnd-(temp.zStart+element.zlength))
+        })
+        
+    rectangles.push({
+            xStart:temp.xStart+element.xlength,
+            xEnd:temp.xEnd,
+            zStart:temp.zStart+(element.zlength-element.packz),
+            zEnd:temp.zStart+element.zEnd,
+            area:(element.packz * (temp.xEnd-(temp.xStart+element.xlength)))
+        }
+
+    )
+   // console.log(rectangles)
+    rectangles=mergeRect(rectangles);
+    
+    return(sortRect(rectangles));
+
+}
+
+var mergeRect=function(rectangles)
+{ 
+    ///TODO :Write Merge function
+    return rectangles; 
+}
+
+var sortRect=function(rectangles)
+{
+   return (rectangles.sort((a,b) => (a.area > b.area) ? 1 : ((b.area > a.area) ? -1 : 0))); 
+}
+
+var abc=[];
+abc.push({
+    xStart:0,
+    xEnd:400,
+    zStart:0,
+    zEnd:600,
+    area:240000
+})
+var ele={
+    packz:5,
+    zEnd:5,
+    xlength:40,
+    zlength:5,
+    quantity:4,
+}
+var xyz=rectReplace(abc,0,ele);
 
 var layer= function(){
     var quantity=0,palletNo=1,
@@ -123,7 +180,7 @@ var layer= function(){
         xEnd:xEnd,
         zStart:0,
         zEnd:zEnd,
-        palArea:xEnd*zEnd
+        area:xEnd*zEnd,
     })
     
 for(var priIndex=10;priIndex>0;priIndex--)
@@ -132,6 +189,7 @@ for(var priIndex=10;priIndex>0;priIndex--)
 
         unpacked=[],
         vol=0,
+        yHighest=0,
         flag=0,
         pFlag=1;
 
@@ -144,123 +202,173 @@ for(var priIndex=10;priIndex>0;priIndex--)
             unpacked=[];
         }
         flag+=1;
+        
         currBoxList.forEach((element,index)=>{
-            var or11=0,or21=0,or31=0,or12=0,or22=0,or32=0,found=0;
+            element.area=Math.min(
+                element.length*element.width,
+                element.width*element.height,
+                element.height*element.length);
+            var or11=0,or21=0,or31=0,or12=0,or22=0,or32=0,found=0,minQuantity=0;
             var final;
-            
-            if(element.width<=yEnd)
+            var rectIndex=-1;
+            if(index<2)
+           { console.log(rectangles[0],rectangles[1])
+            console.log(element)}
+            for (var ind=0;ind<rectangles.length;ind++)
             {
+                var rectangle=rectangles[ind];
 
-            console.log("AAAAAAAAAAAAA")
-                or11=findQuantity(xEnd-xStart,zEnd-zStart,element.length,element.height,element.quantity);
-                console.log("BBBBBBBBBB")
-               // console.log(or11.quantity,element.quantity)
-                console.log(xEnd-xStart,zEnd-zStart,element.length,element.height,element.quantity)
-                    if(or11.quantity==element.quantity)
-                    {
-                        found=1;
-                        final=or11;console.log("FOund")
-
-                    }
-                if(found==0)
+                if(rectangle.area > element.area)
                 {
-                    or12=findQuantity(zEnd-zStart,xEnd-xStart,element.length,element.height,element.quantity);
-                    if(or11.quantity==element.quantity)
+
+                    xStart=rectangle.xStart;
+                    xEnd=rectangle.xEnd;
+                    zStart=rectangle.zStart;
+                    zEnd=rectangle.zEnd;
+
+                    if(element.width<=yEnd)
                     {
-                        found=1;
-                        final=or11;
+
+                        or11=findQuantity(xEnd-xStart,zEnd-zStart,element.length,element.height,element.quantity);
+                            if(or11.quantity==element.quantity)
+                            {
+                                found=1;
+                                final=or11;
+                                final.packx=element.length;
+                                final.packz=element.height;
+                                final.packy=element.width;
+                                rectIndex=ind;
+                                break;
+                            }
+                            else if(or11.quantity>minQuantity)
+                            {
+                                minQuantity=or11.quantity;
+                                final=or11;
+                                
+                            }
+                        if(found==0)
+                        {
+                            or12=findQuantity(xEnd-xStart,zEnd-zStart,element.height,element.length,element.quantity);
+                            if(or11.quantity==element.quantity)
+                            {
+                                found=1;
+                                final=or11;
+                                final.packx=element.height;
+                                final.packz=element.length;
+                                final.packy=element.width;
+                                rectIndex=ind;
+                                break;
+                            }
+                            else if(or12.quantity>minQuantity)
+                            {
+                                minQuantity=or12.quantity;
+                                final=or11;
+                                
+                            }
+                        }
                     }
-                }
-            }
-            if(found==0 && element.height<=yEnd )
-            {
-                or21=findQuantity(xEnd-xStart,zEnd-zStart,element.length,element.width,element.quantity);
-                if(or21.quantity==element.quantity)
-                {
-                    found=1;
-                    final=or21;
-                }
+                    if(found==0 && element.height<=yEnd )
+                    {  console.log("bbbbbbbbbbbbbbbbbbbb")
+                        or21=findQuantity(xEnd-xStart,zEnd-zStart,element.length,element.width,element.quantity);
+                        if(or21.quantity==element.quantity)
+                        {
+                            found=1;
+                            final=or21;
+                            final.packx=element.length;
+                            final.packz=element.width;
+                            final.packy=element.height;
+                            rectIndex=ind;
+                            break;
 
-                if(found==0)
-                {
-                    or22=findQuantity(zEnd-zStart,xEnd-xStart,element.length,element.width,element.quantity)
-                    if(or22.quantity==element.quantity)
-                    {
-                        found=1;
-                        final=or21;
+                        }
+                        else if(or21.quantity>minQuantity)
+                        {
+                            minQuantity=or21.quantity;
+                            final=or21;
+                            
+                        }
+
+                        if(found==0)
+                        {
+                            or22=findQuantity(xEnd-xStart,zEnd-zStart,element.width,element.length,element.quantity)
+                            if(or22.quantity==element.quantity)
+                            {
+                                found=1;
+                                final=or21;
+                                final.packx=element.width;
+                                final.packz=element.length;
+                                final.packy=element.height;
+                                rectIndex=ind;
+                                break;
+                            }
+                            else if(or22.quantity>minQuantity)
+                            {
+                                minQuantity=or22.quantity;
+                                final=or22;
+                                
+                            }
+                        }
                     }
-                }
-            }
-            if(found==0 && element.length<=yEnd)
-            {
-                or31=findQuantity(xEnd-xStart,zEnd-zStart,element.width,element.height,element.quantity);
-                if(or31.quantity==element.quantity)
-                { 
-                    found=1;
-                    final=or31;
-                }
+                    if(found==0 && element.length<=yEnd)
+                    {  console.log("ccccccccccccccccc")
+                        or31=findQuantity(xEnd-xStart,zEnd-zStart,element.width,element.height,element.quantity);
+                        if(or31.quantity==element.quantity)
+                        { 
+                            found=1;
+                            final=or31;
+                            final.packx=element.width;
+                            final.packz=element.height;
+                            final.packy=element.length;
+                            rectIndex=ind;
+                            break;
+                        }
+                        else if(or31.quantity>minQuantity)
+                        {
+                            minQuantity=or31.quantity;
+                            final=or31;
+                            
+                        }
 
 
-                if(found==0)
-                { 
-                    or32=findQuantity(xEnd-xStart,zEnd-zStart,element.width,element.height,element.quantity);
-                    if(or32.quantity==element.quantity)
-                    {
-                        found=1;
-                        final=or32;
+                        if(found==0)
+                        { 
+                            or32=findQuantity(xEnd-xStart,zEnd-zStart,element.height,element.width,element.quantity);
+                            if(or32.quantity==element.quantity)
+                            {
+                                found=1;
+                                final=or32;
+                                final.packx=element.height;
+                                final.packz=element.width;
+                                final.packy=element.length;
+                                rectIndex=ind;
+                                break;
+                            }
+                            else if(or32.quantity>minQuantity)
+                            {
+                                minQuantity=or32.quantity;
+                                final=or32;
+                                
+                            }
+                        }
                     }
                 }
             }
             console.log(found)
-
-            // var best=Math.max(or11,or21,or31,or32,or22,or12);
-            // if(best>0)
-            // {
-            //     var packx,packy;
-            //     if(best==or1)
-            //         {
-            //             final=or1;
-            //             packx=element.length;
-            //             packy=element.width;
-            //             packz=element.height;
-            //         }
-            //     else if(best==or2)
-            //     {
-            //         final=or2;  
-            //         packx=element.length;
-            //         packy=element.height;
-            //         packz=element.width;
-                    
-            //     } 
-            //     else
-            //         {
-            //             final=or3;
-            //             packx=element.width;
-            //             packy=element.length;
-            //             packz=element.height;
-            //         }
-                
-            ///////////////////////////
-                if(final.quantity >= element.quantity)
-                {
-                    console.log("Inside if")
-                    let n=element.quantity;
-                 //   vol+=(n*(packx*packy));
-                    console.log("SKU: "+element.SKU+" Place all "+element.quantity+
-                    " packets from x= "+xStart.toFixed(1)+" z= "+zStart.toFixed(1) );
-                   // console.log("In Orientation X= "+packx.toFixed(1)+" Y = "+packy.toFixed(1));
-
-                   
+                if(final.quantity == element.quantity)
+                {  
                     quantity+=1;
-                    palArea=((xEnd-xStart)*(zEnd-zStart))
-                    console.log("New xStart= "+xStart.toFixed(1)+
-                    " New z-start= "+zStart.toFixed(1)+" Area= "+palArea.toFixed(1));
-                    console.log(".");
                     pFlag=1;
-                }
-                
-               
+                    if(final.packy >yHighest)
+                    {
+                        yHighest=final.packy;
+                    }
 
+                    rectangles=rectReplace(rectangles,rectIndex,final);       
+                }
+                else if(final.quantity<element.quantity)
+                {
+                    console.log("Less");
+                }
         })
         yEnd-=yHighest;
         if(yEnd<=1)
@@ -300,8 +408,4 @@ for(var priIndex=10;priIndex>0;priIndex--)
     console.log(palletNo,data.totalBoxVol/data.crate[crateIndex].vol);
 
 }
-
-
-
 layer();
-
