@@ -78,10 +78,10 @@ var layer= function(){
     console.log("###################################################################################")
     console.log("Start Pallet No :",palletNo);
     console.log("###################################################################################")
-for(var priIndex=10;priIndex>0;priIndex--)
+    findCrate();
+    for(var priIndex=10;priIndex>0;priIndex--)
 {
     setPriority(priIndex);
-    findCrate();
     var xStart=0,
          xEnd=data.crate[crateIndex].length,
          zStart=0,
