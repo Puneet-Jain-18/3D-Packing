@@ -14,7 +14,7 @@ var ws=wb.Sheets[wb.SheetNames[0]];
         {
             layers.dim.add(element.height).add(element.width).add(element.length);
             data.push(element);
-            totalBoxVol=totalBoxVol+element.vol;
+            totalBoxVol=totalBoxVol+(element.vol*element.quantity);
         }
     });
     crate.forEach(element=>{

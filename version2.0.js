@@ -1,5 +1,5 @@
 var data=require('./initialize');     //data.box  //data.crate   //data.layers.dim   //data.totalBoxVol
-
+console.log(data.totalBoxVol);
 
 //////////////////////////////////
 ///////////Variables//////////////
@@ -7,7 +7,7 @@ var data=require('./initialize');     //data.box  //data.crate   //data.layers.d
 var crateIndex=0;
 var currPri=5;
 var currBoxList=[];
-
+var volumeArray=[]
 
 
 //////////////////////////////////
@@ -155,12 +155,9 @@ var mergeRect=function(rectangles)
                         area:((rectangles[i].xEnd-rectangles[i].xStart)*(end-st)),
                     })
                     
-                    console.log(i,j)
                     rectangles.splice(i,1)
                     j-=1;
                     rectangles.splice(j,1);
-                    console.log(i,j)
-                    console.log(rectangles)
 
                   
 
@@ -179,8 +176,6 @@ var mergeRect=function(rectangles)
                         zEnd:rectangles[i].zEnd,
                         area:((rectangles[i].zEnd-rectangles[i].zStart)*(end-st)),
                     })
-                    console.log(rectangles)
-                    console.log(i,j)
                     rectangles.splice(i,1)
                     j-=1;
                     rectangles.splice(j,1);
@@ -199,7 +194,7 @@ var sortRect=function(rectangles)
    return (rectangles.sort((a,b) => (a.area > b.area) ? 1 : ((b.area > a.area) ? -1 : 0))); 
 }
 
-var problem=[],oldList=0;
+var oldList=0;
 var layer= function(){
 
     var quantity=0,palletNo=1,
@@ -243,8 +238,6 @@ var layer= function(){
         
             while(layerFlag)
             {
-                console.log("LIST LENGTH :",unpacked.length);
-                console.log(unpacked);
                 layerFlag=0;
                     currBoxList=unpacked;
                     unpacked=[];
@@ -287,18 +280,22 @@ var layer= function(){
                                     }
                                     else if(or11.quantity>minQuantity)
                                     {
+                                        final=or11;
                                         minQuantity=or11.quantity;
                                         rectIndex=ind;
-                                        final=or11;
+                                        final.packx=element.length;
+                                        final.packz=element.height;
+                                        final.packy=element.width;
+                                        
                                         
                                     }
                                 if(found==0)
                                 {
                                     or12=findQuantity(xEnd-xStart,zEnd-zStart,element.height,element.length,element.quantity);
-                                    if(or11.quantity==element.quantity)
+                                    if(or12.quantity==element.quantity)
                                     {
                                         found=1;
-                                        final=or11;
+                                        final=or12;
                                         final.packx=element.height;
                                         final.packz=element.length;
                                         final.packy=element.width;
@@ -307,9 +304,12 @@ var layer= function(){
                                     }
                                     else if(or12.quantity>minQuantity)
                                     {
+                                        final=or12;
                                         minQuantity=or12.quantity;
                                         rectIndex=ind;
-                                        final=or11;
+                                        final.packx=element.height;
+                                        final.packz=element.length;
+                                        final.packy=element.width;
                                         
                                     }
                                 }
@@ -330,9 +330,12 @@ var layer= function(){
                                 }
                                 else if(or21.quantity>minQuantity)
                                 {
+                                    final=or21;
                                     minQuantity=or21.quantity;
                                     rectIndex=ind;
-                                    final=or21;
+                                    final.packx=element.length;
+                                    final.packz=element.width;
+                                    final.packy=element.height;
                                     
                                 }
 
@@ -342,7 +345,7 @@ var layer= function(){
                                     if(or22.quantity==element.quantity)
                                     {
                                         found=1;
-                                        final=or21;
+                                        final=or22;
                                         final.packx=element.width;
                                         final.packz=element.length;
                                         final.packy=element.height;
@@ -351,15 +354,19 @@ var layer= function(){
                                     }
                                     else if(or22.quantity>minQuantity)
                                     {
+                                        final=or22;
                                         minQuantity=or22.quantity;
                                         rectIndex=ind;
-                                        final=or22;
+                                        final.packx=element.width;
+                                        final.packz=element.length;
+                                        final.packy=element.height;
+                                       
                                         
                                     }
                                 }
                             }
                             if(found==0 && element.length<=yEnd)
-                            {//  console.log("ccccccccccccccccc")
+                            {
                                 or31=findQuantity(xEnd-xStart,zEnd-zStart,element.width,element.height,element.quantity);
                                 if(or31.quantity==element.quantity)
                                 { 
@@ -373,10 +380,12 @@ var layer= function(){
                                 }
                                 else if(or31.quantity>minQuantity)
                                 {
-                                    minQuantity=or31.quantity;
-                                    rectIndex=ind;
                                     final=or31;
-                                    
+                                    minQuantity=or31.quantity;
+                                    final.packx=element.width;
+                                    final.packz=element.height;
+                                    final.packy=element.length;
+                                    rectIndex=ind;                                                                  
                                 }
 
 
@@ -396,16 +405,17 @@ var layer= function(){
                                     }
                                     else if(or32.quantity>minQuantity)
                                     {
-                                        minQuantity=or32.quantity;
-                                        rectIndex=ind;
                                         final=or32;
-                                        
+                                        minQuantity=or32.quantity;
+                                        final.packx=element.height;
+                                        final.packz=element.width;
+                                        final.packy=element.length;
+                                        rectIndex=ind;
                                     }
                                 }
                             }
                         }
                     }
-                    console.log("QUANTITY",final.quantity);
                     if(rectIndex==-1)
                     {
                         unpacked.push(element);
@@ -413,6 +423,7 @@ var layer= function(){
                     }
                         if(final.quantity == element.quantity)
                         {  
+                            vol+=element.quantity*(final.packx*final.packy*final.packz)
                             quantity+=1;
                             layerFlag=1;
                             if(final.packy >yHighest)
@@ -425,20 +436,19 @@ var layer= function(){
                         else if(final.quantity<element.quantity && final.quantity>=1)
                         {
                             layerFlag=1;
+                            vol+=(final.quantity*final.packx*final.packy*final.packz);
                             if(final.packy >yHighest)
                             {
                                 yHighest=final.packy;
                             }
                             rectangles=rectReplace(rectangles,rectIndex,final); 
-                            console.log("Packed", element.quantity)
                             element.quantity-=final.quantity;
-                            console.log(element.quantity)
                             unpacked.push(element);
                         }
                         else
                         {
                           //  quantity+=1;
-                            problem.push(element);
+                            unpacked.push(element);
                         }
                     }
                     if(unpacked.length==0)
@@ -448,7 +458,8 @@ var layer= function(){
                         if(priIndex<=0)
                         break;
                         setPriority(priIndex);
-                        unpacked=currBoxList
+                        unpacked=currBoxList;
+                        layerFlag=1;
                     }
                     
 
@@ -461,7 +472,7 @@ var layer= function(){
             if(yEnd<=1 ||oldList==unpacked.length)
             break;
             
-            console.log("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ Adding New Layer in the pallet  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+            console.log("////////////////////////////////////// Adding New Layer in the pallet  ///////////////////////////////////");
            oldList=unpacked.length;
             rectangles.length=0;
             rectangles.push({
@@ -474,9 +485,6 @@ var layer= function(){
         }
         if(priIndex>0 && unpacked.length>0)
         {
-
-           // console.log(unpacked.length);
-            //console.log(unpacked[0]);
             rectangles.length=0;
             rectangles.push({
                 xStart:0,
@@ -485,22 +493,40 @@ var layer= function(){
                 zEnd:data.crate[crateIndex].width,
                 area:(data.crate[crateIndex].width)*(data.crate[crateIndex].length),
             })
-            yEnd=data.crate[crateIndex].height;
-              console.log("PRIORITY=",priIndex);
+            
               palletNo+=1;
+              volumeArray.push(Math.ceil(vol));
+              console.log("VOLUME OF THIS PALLET USED",vol)
+
+              console.log("Y Remaining = ",yEnd);
+              console.log("Unpacked Items",unpacked.length)
+              if(vol<10000000)
+              {console.log(unpacked);
+                //return;
+              }
+
+              vol=0;
               console.log("##########################################################################################################");
               console.log("Starting new pallet No.  "+palletNo);
+              console.log("Current PRIORITY=",priIndex);
+              yEnd=data.crate[crateIndex].height;
               console.log("##########################################################################################################");
-        }
+            
+            }
+        
 
     }
-    console.log("Remainig Gap x= ",(xEnd-xStart),(zEnd-zStart));
     console.log("Total quantity packed = ",quantity);
     console.log("Remaining to be packed = ", unpacked.length,currBoxList.length);
-    console.log("Volume wasted = ",vol,yEnd)
+ 
     console.log(data.crate[crateIndex]);
-    console.log(palletNo,data.totalBoxVol/data.crate[crateIndex].vol);
-    console.log(problem.length)
+    console.log(palletNo,data.totalBoxVol/data.crate[0].vol);
+    var tot=0
+    for(var i=0;i<volumeArray.length;i++)
+    tot+=volumeArray[i];
+
+    console.log(data.totalBoxVol-tot)
+    console.log(data.box.length)
 }
 
 layer()
