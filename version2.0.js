@@ -5,8 +5,9 @@ var data=require('./initialize');     //data.box  //data.crate   //data.layers.d
 var crateIndex=0;
 var currPri=5;
 var currBoxList=[];
-var volumeArray=[]
-
+var volumeArray=[];
+var problem=[];
+var oldList=0;
 
 //////////////////////////////////
 ///////////FUNCTIONS//////////////
@@ -25,41 +26,11 @@ var findCrate = function(){
     }
 }
 
-var layerEval= function(){
-    data.layers.dim.forEach(element => {
-        var diff=0;
-        for(var i=0 ;i<data.box.length;i++)
-        {
-            diff=diff+ Math.min(Math.abs(element -data.box[i].height),Math.abs(element -data.box[i].height),Math.abs(element -data.box[i].length))
-        }
-        data.layers.val.push(diff);
-    });
-}
-
-var addLayer=function(){
-    var index=data.layers.val.indexOf(Math.min(...data.layers.val));
-    var layerThickness=data.layers.dim[index];
-    
-
-}
-
-
-
-
-
-//////////////////////////////////
-///////////EXECUTION//////////////
-//////////////////////////////////
-
-
-//  layerEval();             currently not using this function
-
 var setPriority=function(pri){
     currPri=pri;
     boxSubset();
-
-
 }
+
 var boxSubset= function(){
     
 data.box.forEach(element => {
@@ -102,6 +73,7 @@ var findQuantity=function(palx,palz,elx,elz,quantity)
         zLength:palzStart,
             })
 }
+
 var rectReplace= function(rectangles,rectIndex,element)
 {
     var temp=rectangles[rectIndex];
@@ -191,8 +163,6 @@ var sortRect=function(rectangles)
 {
    return (rectangles.sort((a,b) => (a.area > b.area) ? 1 : ((b.area > a.area) ? -1 : 0))); 
 }
-var problem=[];
-var oldList=0;
 
 var again=function(sku)
 {
@@ -203,6 +173,10 @@ var again=function(sku)
     }
     return 0;
 }
+//////////////////////////////////
+///////////EXECUTION//////////////
+//////////////////////////////////
+
 var layer= function(){
 
     var quantity=0,palletNo=1,
@@ -438,6 +412,8 @@ var layer= function(){
                     }
                         if(final.quantity == element.quantity )
                         {  
+                            //console.log(final);
+                            //console.log(element);
                             vol+=element.quantity*(final.packx*final.packy*final.packz)
                             quantity+=1;
                             layerFlag=1;
@@ -447,7 +423,11 @@ var layer= function(){
                             {
                                 yHighest=final.packy;
                             }
-
+                            let rect=rectangles[rectIndex];
+                            console.log("SKU: "+element.SKU+" Place all "+element.quantity+
+                                      " packets from x= "+rect.xStart.toFixed(1)+" z= "+rect.zStart.toFixed(1));
+                            console.log("In Orientation X= "+final.packx.toFixed(1)+" z = "+final.packz.toFixed(1));
+                            console.log("..")
                             rectangles=rectReplace(rectangles,rectIndex,final);       
                         }
                         else if(final.quantity<element.quantity && final.quantity>=1)
@@ -458,6 +438,11 @@ var layer= function(){
                             {
                                 yHighest=final.packy;
                             }
+                            let rect=rectangles[rectIndex];
+                            console.log("SKU: "+element.SKU+" Place ONLY "+element.quantity+
+                                      " packets from x= "+rect.xStart.toFixed(1)+" z= "+rect.zStart.toFixed(1));
+                            console.log("In Orientation X= "+final.packx.toFixed(1)+" z = "+final.packz.toFixed(1));
+                            console.log("..")
                             rectangles=rectReplace(rectangles,rectIndex,final); 
                             element.quantity=element.quantity-final.quantity;
                             unpacked.push(element);
@@ -469,7 +454,7 @@ var layer= function(){
                     }
                     if(unpacked.length==0)
                     {
-                        console.log("YESSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS")
+                        console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ Decreasing Priority Now $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
                         priIndex-=1;
                         if(priIndex<=0)
                         break;
