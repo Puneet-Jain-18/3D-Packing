@@ -177,13 +177,13 @@ var again=function(sku)
 //////////////////////////////////
 
 var layer= function(){
-
+    
+    findCrate();
     var quantity=0,palletNo=1,
     yEnd=data.crate[crateIndex].height;
     console.log("###################################################################################")
     console.log("Start Pallet No :",palletNo);
     console.log("###################################################################################")
-    findCrate();
 
     var rectangles=[],
         xEnd=data.crate[crateIndex].length,

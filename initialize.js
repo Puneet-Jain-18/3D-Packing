@@ -24,7 +24,7 @@ var ws=wb.Sheets[wb.SheetNames[0]];
 var totalBoxVol=0.0,
     crate=[
         {
-            length:400,width:600,height:720,vol:0
+            length:400,width:600,height:720,vol:0       ///please place the biggest crate first
         },
         {
         length:600, width:400, height:350,vol:0
