@@ -25,8 +25,11 @@ var insertCrate=function(palletNo,x,z,y)
         xRemaining:x,
         yRemainig:y,
         zRemaining :z,
+        maxX:x,
+        maxZ:z,
         vol:x*y*z,
-        boxesPacked:null,
+        boxList:[],
+        yHighest:0,
         rectangles=[{
         xEnd:data.crate[crateIndex].length,
         zEnd:data.crate[crateIndex].width,
@@ -57,6 +60,23 @@ var findCrate = function()
             }
     }
     crateIndex=index;
+}
+var addNewLayer= function(crate)
+{
+    crate.yRemainig-=crate.yHighest;
+    crate.yHighest=0;
+    crate.xRemaining=crate.maxX;
+    crate.zRemaining=crate.maxZ;
+    crate.rectangles.length=0;
+    crate.rectangles.push({
+        xEnd:crate.maxX,
+        zEnd:crate.maxZ,
+        zStart:0,
+        xStart:0,
+        area:crate.maxX*crate.maxZ,
+        })
+        return (crate);
+
 }
 
 var setPriority=function(pri){
@@ -210,6 +230,7 @@ var again=function(sku)
 
 var layer= function(){
 
+
     findCrate();
     var quantity=0,palletNo=1,
     yEnd=data.crate[crateIndex].height;    //redundent
@@ -218,21 +239,6 @@ var layer= function(){
     console.log("Adding Pallet No :",palletNo);
     console.log("###################################################################################")
 
-    var rectangles=[],
-        xEnd=data.crate[crateIndex].length,
-        zEnd=data.crate[crateIndex].width,    ///this whole is redundent
-        yEnd=data.crate[crateIndex].height,
-        zStart=0,
-        xStart=0;
-
-
-    rectangles.push({
-        xStart:0,
-        xEnd:xEnd,
-        zStart:0,          //redundent
-        zEnd:zEnd,
-        area:xEnd*zEnd,
-    })
     var priIndex=10;
     var unpacked=currBoxList,
         vol=0;                      
@@ -253,8 +259,8 @@ var layer= function(){
             while(layerFlag)
             {
                 layerFlag=0;
-                    currBoxList=unpacked;
-                    unpacked=[];
+                currBoxList=unpacked;
+                unpacked=[];
                 for(var j=0;j<currBoxList.length;j++)
                 {
                     element=currBoxList[j];
@@ -452,49 +458,233 @@ var layer= function(){
                                     }
                                 }
                             }
-                            if(found==1)
-                            break;
+                        }
+                        if(found==1)
+                        break;
+                        // this means current element cannot be acomodaated in current layer
+                        //so we make a new layer to check if element can be accomodated in it or not
+                        if(rectIndex==-1)       
+                        {
+                           var temp=addNewLayer(currCrate);
+                            var rectangle=temp.rectangles[0];
+                            if(rectangle.area >= element.area)
+                            {
+
+                                xStart=rectangle.xStart;
+                                xEnd=rectangle.xEnd;
+                                zStart=rectangle.zStart;
+                                zEnd=rectangle.zEnd;
+
+                                if(element.width<=yEnd)
+                                {
+
+                                    or11=findQuantity(xEnd-xStart,zEnd-zStart,element.length,element.height,element.quantity);
+                                        if(or11.quantity==element.quantity)
+                                        {
+                                            found=1;
+                                            final=or11;
+                                            final.packx=element.length;
+                                            final.packz=element.height;
+                                            final.packy=element.width;
+                                            rectIndex=ind;
+                                            finalCrate=chosenCreate;
+                                        }
+                                        else if(or11.quantity>minQuantity)
+                                        {
+                                            final=or11;
+                                            minQuantity=or11.quantity;
+                                            rectIndex=ind;
+                                            final.packx=element.length;
+                                            final.packz=element.height;
+                                            final.packy=element.width;
+                                            finalCrate=chosenCreate;
+                                            
+                                            
+                                        }
+                                    if(found==0)
+                                    {
+                                        or12=findQuantity(xEnd-xStart,zEnd-zStart,element.height,element.length,element.quantity);
+                                        if(or12.quantity==element.quantity)
+                                        {
+                                            found=1;
+                                            final=or12;
+                                            final.packx=element.height;
+                                            final.packz=element.length;
+                                            final.packy=element.width;
+                                            rectIndex=ind;
+                                            finalCrate=chosenCreate;
+                                            
+                                        }
+                                        else if(or12.quantity>minQuantity)
+                                        {
+                                            final=or12;
+                                            minQuantity=or12.quantity;
+                                            rectIndex=ind;
+                                            final.packx=element.height;
+                                            final.packz=element.length;
+                                            final.packy=element.width;
+                                            finalCrate=chosenCreate;
+                                        }
+                                    }
+                                }
+                                if(found==0 && element.height<=yEnd )
+                                { 
+                                    or21=findQuantity(xEnd-xStart,zEnd-zStart,element.length,element.width,element.quantity);
+                                    if(or21.quantity==element.quantity)
+                                    {
+                                        found=1;
+                                        final=or21;
+                                        final.packx=element.length;
+                                        final.packz=element.width;
+                                        final.packy=element.height;
+                                        rectIndex=ind;
+                                        finalCrate=chosenCreate;
+                                      
+
+                                    }
+                                    else if(or21.quantity>minQuantity)
+                                    {
+                                        final=or21;
+                                        minQuantity=or21.quantity;
+                                        rectIndex=ind;
+                                        final.packx=element.length;
+                                        final.packz=element.width;
+                                        final.packy=element.height;
+                                        finalCrate=chosenCreate;
+                                    }
+
+                                    if(found==0)
+                                    {
+                                        or22=findQuantity(xEnd-xStart,zEnd-zStart,element.width,element.length,element.quantity)
+                                        if(or22.quantity==element.quantity)
+                                        {
+                                            found=1;
+                                            final=or22;
+                                            final.packx=element.width;
+                                            final.packz=element.length;
+                                            final.packy=element.height;
+                                            rectIndex=ind;
+                                            finalCrate=chosenCreate;
+                                        
+                                        }
+                                        else if(or22.quantity>minQuantity)
+                                        {
+                                            final=or22;
+                                            minQuantity=or22.quantity;
+                                            rectIndex=ind;
+                                            final.packx=element.width;
+                                            final.packz=element.length;
+                                            final.packy=element.height;
+                                            finalCrate=chosenCreate;
+                                        }
+                                    }
+                                }
+                                if(found==0 && element.length<=yEnd)
+                                {
+                                    or31=findQuantity(xEnd-xStart,zEnd-zStart,element.width,element.height,element.quantity);
+                                    if(or31.quantity==element.quantity)
+                                    { 
+                                        found=1;
+                                        final=or31;
+                                        final.packx=element.width;
+                                        final.packz=element.height;
+                                        final.packy=element.length;
+                                        rectIndex=ind;
+                                        finalCrate=chosenCreate;
+                                    }
+                                    else if(or31.quantity>minQuantity)
+                                    {
+                                        final=or31;
+                                        minQuantity=or31.quantity;
+                                        final.packx=element.width;
+                                        final.packz=element.height;
+                                        final.packy=element.length;
+                                        rectIndex=ind;   
+                                        finalCrate=chosenCreate;                                                               
+                                    }
+
+
+
+                                    if(found==0)
+                                    { 
+                                        or32=findQuantity(xEnd-xStart,zEnd-zStart,element.height,element.width,element.quantity);
+                                        if(or32.quantity==element.quantity)
+                                        {
+                                            found=1;
+                                            final=or32;
+                                            final.packx=element.height;
+                                            final.packz=element.width;
+                                            final.packy=element.length;
+                                            rectIndex=ind;
+                                            finalCrate=chosenCreate;
+                                        }
+                                        else if(or32.quantity>minQuantity)
+                                        {
+                                            final=or32;
+                                            minQuantity=or32.quantity;
+                                            final.packx=element.height;
+                                            final.packz=element.width;
+                                            final.packy=element.length;
+                                            rectIndex=ind;
+                                            finalCrate=chosenCreate;
+                                        }
+                                    }
+                                }
+
+                                ////inserting new layer actually
+                                if(rectIndex!=-1)
+                                {
+                                    crates[chosenCreate]=addNewLayer(currCrate);
+                                    break;
+                                }
+                            }
+
                         }
                     }
-                    if(rectIndex==-1)
+                    //ths means current element cannot be accomodated in any pallet
+                    //we need to create new pallet for this
+                    if(rectIndex==-1) 
                     {
-                        unpacked.push(element);
-                        continue;
+                        insertCrate();
+                        j=j-1;           //re evaluate this element
+                        continue;                   
                     }
                         if(final.quantity == element.quantity )
                         {  
-                            //console.log(final);
-                            //console.log(element);
-                            vol+=element.quantity*(final.packx*final.packy*final.packz)
+                            vol+=element.quantity*(final.packx*final.packy*final.packz);
+                            crates[finalCrate].vol -=element.quantity*(final.packx*final.packy*final.packz);
+                            crates.boxList.push(element);
                             quantity+=1;
                             layerFlag=1;
                             problem.push(element.SKU);
 
-                            if(final.packy >yHighest)
+                            if(final.packy >crates[finalCrate].yHighest)
                             {
-                                yHighest=final.packy;
+                                crates[finalCrate].yHighest=final.packy;
                             }
-                            let rect=rectangles[rectIndex];
+                            let rect=crates[finalCrate].rectangles[rectIndex];
                             console.log("SKU: "+element.SKU+" Place all "+element.quantity+
                                       " packets from x= "+rect.xStart.toFixed(1)+" z= "+rect.zStart.toFixed(1));
                             console.log("In Orientation X= "+final.packx.toFixed(1)+" z = "+final.packz.toFixed(1));
                             console.log("..")
-                            rectangles=rectReplace(rectangles,rectIndex,final);       
+                            crates[finalCrate].rectangles=rectReplace(crates[finalCrate].rectangles,rectIndex,final);       
                         }
                         else if(final.quantity<element.quantity && final.quantity>=1)
                         {
                             layerFlag=1;
                             vol+=(final.quantity*final.packx*final.packy*final.packz);
-                            if(final.packy >yHighest)
+                            crates[finalCrate].vol-=(final.quantity*final.packx*final.packy*final.packz);
+
+                            if(final.packy >crates[finalCrate].yHighest)
                             {
-                                yHighest=final.packy;
+                                crates[finalCrate].yHighest=final.packy;
                             }
-                            let rect=rectangles[rectIndex];
+                            let rect=crates[finalCrate].rectangles[rectIndex];
                             console.log("SKU: "+element.SKU+" Place ONLY "+element.quantity+
                                       " packets from x= "+rect.xStart.toFixed(1)+" z= "+rect.zStart.toFixed(1));
                             console.log("In Orientation X= "+final.packx.toFixed(1)+" z = "+final.packz.toFixed(1));
                             console.log("..")
-                            rectangles=rectReplace(rectangles,rectIndex,final); 
+                            crate[finalCrate].rectangles=rectReplace(crate[finalCrate].rectangles,rectIndex,final); 
                             element.quantity=element.quantity-final.quantity;
                             unpacked.push(element);
                         }
@@ -502,7 +692,7 @@ var layer= function(){
                         {
                             unpacked.push(element);
                         }
-                    }
+                }
                     if(unpacked.length==0)
                     {
                         console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ Decreasing Priority Now $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
@@ -513,27 +703,18 @@ var layer= function(){
                         unpacked=currBoxList;
                         layerFlag=1;
                     }
-                    
-
             }
             //done rightly :)
             if(priIndex<=0)
             break;
 
-            yEnd-=yHighest;
+            crates[finalCrate].yRemainig-=crates[finalCrate].yHighest;
             if(oldList==unpacked.length)
             break;
             
             console.log("////////////////////////////////////// Adding New Layer in the pallet  ///////////////////////////////////");
            oldList=unpacked.length;
-            rectangles.length=0;
-            rectangles.push({
-                xStart:0,
-                xEnd:data.crate[crateIndex].length,
-                zStart:0,
-                zEnd:data.crate[crateIndex].width,
-                area:(data.crate[crateIndex].width)*(data.crate[crateIndex].length),
-            })
+           insertCrate();
         }
         if(priIndex>0 && unpacked.length>0)
         {
