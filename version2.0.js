@@ -1,6 +1,4 @@
 var data=require('./initialize');     //data.box  //data.crate   //data.layers.dim   //data.totalBoxVol
-console.log(data.totalBoxVol);
-
 //////////////////////////////////
 ///////////Variables//////////////
 //////////////////////////////////
@@ -193,8 +191,18 @@ var sortRect=function(rectangles)
 {
    return (rectangles.sort((a,b) => (a.area > b.area) ? 1 : ((b.area > a.area) ? -1 : 0))); 
 }
-
+var problem=[];
 var oldList=0;
+
+var again=function(sku)
+{
+    for(var i=0;i<problem.length;i++)
+    {
+        if(problem[i]==sku)
+        return 1;
+    }
+    return 0;
+}
 var layer= function(){
 
     var quantity=0,palletNo=1,
@@ -244,6 +252,13 @@ var layer= function(){
                 for(var j=0;j<currBoxList.length;j++)
                 {
                     element=currBoxList[j];
+                    //////////////////////////////////////////////////////////////////////
+                    ////////////Check why element is coming again////////////////////////
+                    /////////////////////////////////////////////////////////////////////
+                    if(again(element.SKU))
+                            {
+                                continue;
+                            }
                     element.area=Math.min(
                         element.length*element.width,
                         element.width*element.height,
@@ -256,7 +271,7 @@ var layer= function(){
                     {
                         var rectangle=rectangles[ind];
 
-                        if(rectangle.area > element.area)
+                        if(rectangle.area >= element.area)
                         {
 
                             xStart=rectangle.xStart;
@@ -421,11 +436,13 @@ var layer= function(){
                         unpacked.push(element);
                         continue;
                     }
-                        if(final.quantity == element.quantity)
+                        if(final.quantity == element.quantity )
                         {  
                             vol+=element.quantity*(final.packx*final.packy*final.packz)
                             quantity+=1;
                             layerFlag=1;
+                            problem.push(element.SKU);
+
                             if(final.packy >yHighest)
                             {
                                 yHighest=final.packy;
@@ -442,7 +459,7 @@ var layer= function(){
                                 yHighest=final.packy;
                             }
                             rectangles=rectReplace(rectangles,rectIndex,final); 
-                            element.quantity-=final.quantity;
+                            element.quantity=element.quantity-final.quantity;
                             unpacked.push(element);
                         }
                         else
@@ -511,16 +528,10 @@ var layer= function(){
 
     }
     console.log("Total quantity packed = ",quantity);
-    console.log("Remaining to be packed = ", unpacked.length,currBoxList.length);
+    console.log("Remaining to be packed = ", unpacked.length);
  
     console.log(data.crate[crateIndex]);
     console.log(palletNo,data.totalBoxVol/data.crate[0].vol);
-    var tot=0
-    for(var i=0;i<volumeArray.length;i++)
-    tot+=volumeArray[i];
-
-    console.log(data.totalBoxVol-tot)
-    console.log(data.box.length)
 }
 
 layer()
