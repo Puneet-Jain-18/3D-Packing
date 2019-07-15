@@ -135,6 +135,62 @@ var rectReplace= function(rectangles,rectIndex,element)
 var mergeRect=function(rectangles)
 { 
     ///TODO :Write Merge function
+    for(var i=0;i<rectangles.length;i++)
+    {
+        for(var j=0;j<rectangles.length;j++)
+        {
+            if(i>=j)
+            continue;
+            if((rectangles[i].zEnd-rectangles[j].zStart==0 || rectangles[i].zStart-rectangles[j].zEnd==0 )&& 
+                rectangles[i].xStart-rectangles[j].xStart==0  &&
+                rectangles[i].xEnd-rectangles[j].xEnd==0)
+                {
+                    let st=Math.min(rectangles[i].zStart,rectangles[j].zStart);
+                    let end=Math.max(rectangles[i].zEnd,rectangles[j].zEnd);
+                    rectangles.push({
+                        xStart:rectangles[i].xStart,
+                        xEnd:rectangles[i].xEnd,
+                        zStart:st,
+                        zEnd:end,
+                        area:((rectangles[i].xEnd-rectangles[i].xStart)*(end-st)),
+                    })
+                    
+                    console.log(i,j)
+                    rectangles.splice(i,1)
+                    j-=1;
+                    rectangles.splice(j,1);
+                    console.log(i,j)
+                    console.log(rectangles)
+
+                  
+
+                }
+                else if((rectangles[i].xEnd-rectangles[j].xStart==0 ||rectangles[i].xStart-rectangles[j].xEnd==0) && 
+                    rectangles[i].zStart-rectangles[j].zStart==0&&
+                    rectangles[i].zEnd-rectangles[j].zEnd==0
+                )
+                {
+                    let st=Math.min(rectangles[i].xStart,rectangles[j].xStart);
+                    let end=Math.max(rectangles[i].xEnd,rectangles[j].xEnd);
+                    rectangles.push({
+                        xStart:st,
+                        xEnd:end,
+                        zStart:rectangles[i].zStart,
+                        zEnd:rectangles[i].zEnd,
+                        area:((rectangles[i].zEnd-rectangles[i].zStart)*(end-st)),
+                    })
+                    console.log(rectangles)
+                    console.log(i,j)
+                    rectangles.splice(i,1)
+                    j-=1;
+                    rectangles.splice(j,1);
+                    j-=1;
+                   
+
+                }
+
+        }
+    }
     return rectangles; 
 }
 
@@ -143,7 +199,7 @@ var sortRect=function(rectangles)
    return (rectangles.sort((a,b) => (a.area > b.area) ? 1 : ((b.area > a.area) ? -1 : 0))); 
 }
 
-
+var problem=[],oldList=0;
 var layer= function(){
 
     var quantity=0,palletNo=1,
@@ -169,12 +225,12 @@ var layer= function(){
         area:xEnd*zEnd,
     })
     var priIndex=10;
-    var unpacked=[],
+    var unpacked=currBoxList,
         vol=0;
     while(priIndex>0)
     {
         setPriority(priIndex);
-            yHighest=0,
+            var yHighest=0,
             flag=0,
             layerFlag=1;
     
@@ -187,15 +243,11 @@ var layer= function(){
         
             while(layerFlag)
             {
-                console.log("Priority Index : ",priIndex,currBoxList.length);
+                console.log("LIST LENGTH :",unpacked.length);
+                console.log(unpacked);
                 layerFlag=0;
-                if(flag)
-                {
-                    console.log("Assigning unpacked",unpacked.length)
                     currBoxList=unpacked;
                     unpacked=[];
-                }
-                flag+=1;
                 for(var j=0;j<currBoxList.length;j++)
                 {
                     element=currBoxList[j];
@@ -236,6 +288,7 @@ var layer= function(){
                                     else if(or11.quantity>minQuantity)
                                     {
                                         minQuantity=or11.quantity;
+                                        rectIndex=ind;
                                         final=or11;
                                         
                                     }
@@ -255,6 +308,7 @@ var layer= function(){
                                     else if(or12.quantity>minQuantity)
                                     {
                                         minQuantity=or12.quantity;
+                                        rectIndex=ind;
                                         final=or11;
                                         
                                     }
@@ -277,6 +331,7 @@ var layer= function(){
                                 else if(or21.quantity>minQuantity)
                                 {
                                     minQuantity=or21.quantity;
+                                    rectIndex=ind;
                                     final=or21;
                                     
                                 }
@@ -297,6 +352,7 @@ var layer= function(){
                                     else if(or22.quantity>minQuantity)
                                     {
                                         minQuantity=or22.quantity;
+                                        rectIndex=ind;
                                         final=or22;
                                         
                                     }
@@ -318,9 +374,11 @@ var layer= function(){
                                 else if(or31.quantity>minQuantity)
                                 {
                                     minQuantity=or31.quantity;
+                                    rectIndex=ind;
                                     final=or31;
                                     
                                 }
+
 
 
                                 if(found==0)
@@ -339,6 +397,7 @@ var layer= function(){
                                     else if(or32.quantity>minQuantity)
                                     {
                                         minQuantity=or32.quantity;
+                                        rectIndex=ind;
                                         final=or32;
                                         
                                     }
@@ -346,13 +405,12 @@ var layer= function(){
                             }
                         }
                     }
+                    console.log("QUANTITY",final.quantity);
                     if(rectIndex==-1)
                     {
-                        console.log
                         unpacked.push(element);
                         continue;
                     }
-                    console.log(found)
                         if(final.quantity == element.quantity)
                         {  
                             quantity+=1;
@@ -364,7 +422,7 @@ var layer= function(){
 
                             rectangles=rectReplace(rectangles,rectIndex,final);       
                         }
-                        else if(final.quantity<element.quantity)
+                        else if(final.quantity<element.quantity && final.quantity>=1)
                         {
                             layerFlag=1;
                             if(final.packy >yHighest)
@@ -372,47 +430,67 @@ var layer= function(){
                                 yHighest=final.packy;
                             }
                             rectangles=rectReplace(rectangles,rectIndex,final); 
+                            console.log("Packed", element.quantity)
                             element.quantity-=final.quantity;
+                            console.log(element.quantity)
                             unpacked.push(element);
                         }
                         else
                         {
-                            unpacked.push(element);
+                          //  quantity+=1;
+                            problem.push(element);
                         }
                     }
                     if(unpacked.length==0)
                     {
+                        console.log("YESSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS")
                         priIndex-=1;
                         if(priIndex<=0)
                         break;
                         setPriority(priIndex);
-                        layerFlag=1;
+                        unpacked=currBoxList
                     }
+                    
 
             }
             ///currently might accomodate one extra layer
             if(priIndex<=0)
             break;
-            yEnd-=yHighest;
-            if(yEnd<=0)
-            break;
 
+            yEnd-=yHighest;
+            if(yEnd<=1 ||oldList==unpacked.length)
+            break;
+            
             console.log("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ Adding New Layer in the pallet  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+           oldList=unpacked.length;
             rectangles.length=0;
             rectangles.push({
                 xStart:0,
                 xEnd:data.crate[crateIndex].length,
                 zStart:0,
-                zEnd:data.crate[crateIndex.width],
-                area:(data.crate[crateIndex.width])*(data.crate[crateIndex].length),
+                zEnd:data.crate[crateIndex].width,
+                area:(data.crate[crateIndex].width)*(data.crate[crateIndex].length),
             })
         }
         if(priIndex>0 && unpacked.length>0)
         {
-            palletNo+=1;
-            console.log("##########################################################################################################");
-            console.log("Starting new pallet No.  "+palletNo);
-            console.log("##########################################################################################################");
+
+           // console.log(unpacked.length);
+            //console.log(unpacked[0]);
+            rectangles.length=0;
+            rectangles.push({
+                xStart:0,
+                xEnd:data.crate[crateIndex].length,
+                zStart:0,
+                zEnd:data.crate[crateIndex].width,
+                area:(data.crate[crateIndex].width)*(data.crate[crateIndex].length),
+            })
+            yEnd=data.crate[crateIndex].height;
+              console.log("PRIORITY=",priIndex);
+              palletNo+=1;
+              console.log("##########################################################################################################");
+              console.log("Starting new pallet No.  "+palletNo);
+              console.log("##########################################################################################################");
         }
 
     }
@@ -422,6 +500,7 @@ var layer= function(){
     console.log("Volume wasted = ",vol,yEnd)
     console.log(data.crate[crateIndex]);
     console.log(palletNo,data.totalBoxVol/data.crate[crateIndex].vol);
-
+    console.log(problem.length)
 }
-layer();
+
+layer()
