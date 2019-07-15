@@ -1,5 +1,6 @@
 var data=require('./initialize');     //data.box  //data.crate   //data.layers.dim   //data.totalBoxVol
 console.log(data.totalBoxVol);
+var m=data.totalBoxVol;
 
 
 //////////////////////////////////
@@ -231,7 +232,7 @@ var layer= function(){
     console.log("Remaining to be packed = ", unpacked.length,currBoxList.length);
     console.log("Volume wasted = ",vol,yEnd)
     console.log(data.crate[crateIndex]);
-    console.log(palletNo,data.totalBoxVol,data.crate[0].vol);
+    console.log(palletNo,m/data.crate[0].vol);
 
 }
 layer();

@@ -447,7 +447,6 @@ var layer= function(){
                         }
                         else
                         {
-                          //  quantity+=1;
                             unpacked.push(element);
                         }
                     }
@@ -464,12 +463,12 @@ var layer= function(){
                     
 
             }
-            ///currently might accomodate one extra layer
+            //done rightly :)
             if(priIndex<=0)
             break;
 
             yEnd-=yHighest;
-            if(yEnd<=1 ||oldList==unpacked.length)
+            if(oldList==unpacked.length)
             break;
             
             console.log("////////////////////////////////////// Adding New Layer in the pallet  ///////////////////////////////////");
@@ -500,11 +499,6 @@ var layer= function(){
 
               console.log("Y Remaining = ",yEnd);
               console.log("Unpacked Items",unpacked.length)
-              if(vol<10000000)
-              {console.log(unpacked);
-                //return;
-              }
-
               vol=0;
               console.log("##########################################################################################################");
               console.log("Starting new pallet No.  "+palletNo);
