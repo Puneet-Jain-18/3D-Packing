@@ -884,12 +884,9 @@ var layer= async function(){
                            el.packz=final.packz; 
                             crates[finalCrate].boxList.push(el);
                         element.quantity=element.quantity-final.quantity;
-                        console.log(currBoxList.length);
                        currBoxList.push(element);
-                       console.log(currBoxList.length);
                        
-                       zflag=1;
-                       vol=currBoxList.length;
+                   
                     }
                     else
                     {
