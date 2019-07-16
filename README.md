@@ -5,6 +5,10 @@ this script packs 3-D objects on the basis of priority assigned to each element
 
 currently it follows layer in layer and shelf based approach to assign places to the objects.
 
+Whole program follow layer in layer approach.<br />
+ie, no new layer is started until one layer is complete witin a pallet.
+once the above layer has started filling, items could not be added to lower layers.
+
 # to run this program
 1. install node js on your system from site : https://nodejs.org/en/
 2. go to terminal clone this repository.  
