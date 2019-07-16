@@ -1791,14 +1791,10 @@ Inside pallet no : 1
 SKU: 103675757 Place all 11 packets from x= 92.0 z= 576.5
 In Orientation X= 8.4 z = 8.4
 ..
-Inside Pallet No : 2
+Inside Pallet No : 1
 SKU: 103668932 Place ONLY 1 packets  starting from x= 390.0 z= 450.3
 In Orientation X= 9.2 z = 11.0
 ..
-654
-655
-PROBLEMMMMMMMMMMMMMMMMMM
-655
 Inside pallet no : 1
 SKU: 103707413 Place all 11 packets from x= 184.4 z= 576.5
 In Orientation X= 14.5 z = 7.0
@@ -2260,66 +2256,38 @@ Inside pallet no : 1
 SKU: 103654293 Place all 12 packets from x= 171.5 z= 558.6
 In Orientation X= 12.0 z = 21.6
 ..
-Inside Pallet No : 2
+Inside Pallet No : 1
 SKU: 103665543 Place ONLY 4 packets  starting from x= 315.5 z= 558.6
 In Orientation X= 19.5 z = 19.5
 ..
-655
-656
-PROBLEMMMMMMMMMMMMMMMMMM
-656
 Inside pallet no : 1
 SKU: 103700198 Place all 2 packets from x= 360.0 z= 429.8
 In Orientation X= 12.0 z = 31.0
 ..
-Inside Pallet No : 2
+Inside Pallet No : 1
 SKU: 103691402 Place ONLY 8 packets  starting from x= 275.0 z= 531.1
 In Orientation X= 15.0 z = 15.0
 ..
-656
-657
-PROBLEMMMMMMMMMMMMMMMMMM
-657
-Inside Pallet No : 2
+Inside Pallet No : 1
 SKU: 103666491 Place ONLY 6 packets  starting from x= 243.0 z= 493.1
 In Orientation X= 23.4 z = 12.7
 ..
-657
-658
-PROBLEMMMMMMMMMMMMMMMMMM
-658
-Inside Pallet No : 2
+Inside Pallet No : 1
 SKU: 103671211 Place ONLY 6 packets  starting from x= 206.2 z= 352.7
 In Orientation X= 28.6 z = 7.2
 ..
-658
-659
-PROBLEMMMMMMMMMMMMMMMMMM
-659
-Inside Pallet No : 2
+Inside Pallet No : 1
 SKU: 103668038 Place ONLY 7 packets  starting from x= 244.2 z= 506.6
 In Orientation X= 21.6 z = 13.4
 ..
-659
-660
-PROBLEMMMMMMMMMMMMMMMMMM
-660
-Inside Pallet No : 2
+Inside Pallet No : 1
 SKU: 103693275 Place ONLY 1 packets  starting from x= 384.0 z= 429.8
 In Orientation X= 14.0 z = 22.0
 ..
-660
-661
-PROBLEMMMMMMMMMMMMMMMMMM
-661
-Inside Pallet No : 2
+Inside Pallet No : 1
 SKU: 103709897 Place ONLY 4 packets  starting from x= 0.0 z= 597.6
 In Orientation X= 95.0 z = 1.0
 ..
-661
-662
-PROBLEMMMMMMMMMMMMMMMMMM
-662
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 Add new  layer in pallet NO 1  Y Remaining: 571
@@ -2501,22 +2469,14 @@ Inside pallet no : 1
 SKU: 103667858 Place all 2 packets from x= 364.0 z= 446.5
 In Orientation X= 18.0 z = 33.0
 ..
-Inside Pallet No : 2
+Inside Pallet No : 1
 SKU: 103669865 Place ONLY 2 packets  starting from x= 363.0 z= 541.1
 In Orientation X= 18.0 z = 33.0
 ..
-662
-663
-PROBLEMMMMMMMMMMMMMMMMMM
-663
-Inside Pallet No : 2
+Inside Pallet No : 1
 SKU: 103713523 Place ONLY 2 packets  starting from x= 333.0 z= 416.5
 In Orientation X= 33.0 z = 18.0
 ..
-663
-664
-PROBLEMMMMMMMMMMMMMMMMMM
-664
 Inside pallet no : 1
 SKU: 103715725 Place all 4 packets from x= 220.0 z= 479.5
 In Orientation X= 37.5 z = 15.5
@@ -2630,14 +2590,10 @@ Inside pallet no : 1
 SKU: 103666413 Place all 9 packets from x= 72.0 z= 472.8
 In Orientation X= 30.0 z = 44.0
 ..
-Inside Pallet No : 2
+Inside Pallet No : 1
 SKU: 103715835 Place ONLY 5 packets  starting from x= 72.0 z= 516.8
 In Orientation X= 55.0 z = 18.5
 ..
-664
-665
-PROBLEMMMMMMMMMMMMMMMMMM
-665
 Inside pallet no : 1
 SKU: 103664817 Place all 4 packets from x= 154.0 z= 436.1
 In Orientation X= 47.0 z = 33.0
@@ -2646,30 +2602,18 @@ Inside pallet no : 1
 SKU: 100048141 Place all 3 packets from x= 143.0 z= 547.8
 In Orientation X= 68.1 z = 17.5
 ..
-Inside Pallet No : 2
+Inside Pallet No : 1
 SKU: 100048108 Place ONLY 3 packets  starting from x= 143.0 z= 565.3
 In Orientation X= 74.5 z = 14.3
 ..
-665
-666
-PROBLEMMMMMMMMMMMMMMMMMM
-666
-Inside Pallet No : 2
+Inside Pallet No : 1
 SKU: 100078139 Place ONLY 3 packets  starting from x= 235.4 z= 397.8
 In Orientation X= 46.0 z = 31.0
 ..
-666
-667
-PROBLEMMMMMMMMMMMMMMMMMM
-667
-Inside Pallet No : 2
+Inside Pallet No : 1
 SKU: 103665755 Place ONLY 1 packets  starting from x= 342.0 z= 332.8
 In Orientation X= 47.5 z = 47.5
 ..
-667
-668
-PROBLEMMMMMMMMMMMMMMMMMM
-668
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 Add new  layer in pallet NO 1  Y Remaining: 336
@@ -2679,30 +2623,18 @@ Inside pallet no : 1
 SKU: 103665231 Place all 2 packets from x= 0.0 z= 0.0
 In Orientation X= 49.0 z = 75.0
 ..
-Inside Pallet No : 2
+Inside Pallet No : 1
 SKU: 103664733 Place ONLY 7 packets  starting from x= 0.0 z= 75.0
 In Orientation X= 56.0 z = 78.0
 ..
-668
-669
-PROBLEMMMMMMMMMMMMMMMMMM
-669
-Inside Pallet No : 2
+Inside Pallet No : 1
 SKU: 103684387 Place ONLY 4 packets  starting from x= 0.0 z= 543.0
 In Orientation X= 90.0 z = 50.0
 ..
-669
-670
-PROBLEMMMMMMMMMMMMMMMMMM
-670
-Inside Pallet No : 2
+Inside Pallet No : 1
 SKU: 103696097 Place ONLY 3 packets  starting from x= 98.0 z= 0.0
 In Orientation X= 80.0 z = 39.0
 ..
-670
-671
-PROBLEMMMMMMMMMMMMMMMMMM
-671
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 Add new  layer in pallet NO 1  Y Remaining: 206
@@ -2790,14 +2722,10 @@ Inside pallet no : 1
 SKU: 103696097 Place all 4 packets from x= 0.0 z= 546.8
 In Orientation X= 80.0 z = 39.0
 ..
-Inside Pallet No : 3
+Inside Pallet No : 2
 SKU: 103709683 Place ONLY 1 packets  starting from x= 0.0 z= 0.0
 In Orientation X= 390.0 z = 555.0
 ..
-671
-672
-PROBLEMMMMMMMMMMMMMMMMMM
-672
 #################################################################################
 
 Inserting new crate 3
@@ -2808,14 +2736,10 @@ Inserting new crate 3
 Add new  layer in pallet NO 3  Y Remaining: 720
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-Inside Pallet No : 4
+Inside Pallet No : 3
 SKU: 103709683 Place ONLY 1 packets  starting from x= 0.0 z= 0.0
 In Orientation X= 390.0 z = 555.0
 ..
-672
-673
-PROBLEMMMMMMMMMMMMMMMMMM
-673
 #################################################################################
 
 Inserting new crate 4
@@ -2826,14 +2750,10 @@ Inserting new crate 4
 Add new  layer in pallet NO 4  Y Remaining: 720
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-Inside Pallet No : 5
+Inside Pallet No : 4
 SKU: 103709683 Place ONLY 1 packets  starting from x= 0.0 z= 0.0
 In Orientation X= 390.0 z = 555.0
 ..
-673
-674
-PROBLEMMMMMMMMMMMMMMMMMM
-674
 #################################################################################
 
 Inserting new crate 5
@@ -5287,40 +5207,28 @@ Inside pallet no : 4
 SKU: 103695877 Place all 7 packets from x= 0.0 z= 140.0
 In Orientation X= 51.0 z = 67.0
 ..
-Inside Pallet No : 6
+Inside Pallet No : 4
 SKU: 103686505 Place ONLY 6 packets  starting from x= 0.0 z= 207.0
 In Orientation X= 60.5 z = 95.0
 ..
-1284
-1285
-PROBLEMMMMMMMMMMMMMMMMMM
-1285
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 Add new  layer in pallet NO 2  Y Remaining: 80
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-Inside Pallet No : 6
+Inside Pallet No : 3
 SKU: 103696105 Place ONLY 1 packets  starting from x= 0.0 z= 0.0
 In Orientation X= 320.0 z = 250.0
 ..
-1285
-1286
-PROBLEMMMMMMMMMMMMMMMMMM
-1286
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 Add new  layer in pallet NO 3  Y Remaining: 169
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-Inside Pallet No : 6
+Inside Pallet No : 4
 SKU: 103709393 Place ONLY 1 packets  starting from x= 0.0 z= 0.0
 In Orientation X= 260.0 z = 340.0
 ..
-1286
-1287
-PROBLEMMMMMMMMMMMMMMMMMM
-1287
 Inside pallet no : 3
 SKU: 103686505 Place all 2 packets from x= 0.0 z= 500.0
 In Orientation X= 60.5 z = 95.0
@@ -5334,43 +5242,27 @@ In Orientation X= 320.0 z = 250.0
 Add new  layer in pallet NO 5  Y Remaining: 250
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-Inside Pallet No : 6
+Inside Pallet No : 5
 SKU: 103709393 Place ONLY 1 packets  starting from x= 0.0 z= 0.0
 In Orientation X= 260.0 z = 340.0
 ..
-1287
-1288
-PROBLEMMMMMMMMMMMMMMMMMM
-1288
-Inside Pallet No : 6
+Inside Pallet No : 5
 SKU: 103709393 Place ONLY 1 packets  starting from x= 0.0 z= 340.0
 In Orientation X= 340.0 z = 260.0
 ..
-1288
-1289
-PROBLEMMMMMMMMMMMMMMMMMM
-1289
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 Add new  layer in pallet NO 5  Y Remaining: 135
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-Inside Pallet No : 6
+Inside Pallet No : 5
 SKU: 103709393 Place ONLY 1 packets  starting from x= 0.0 z= 0.0
 In Orientation X= 260.0 z = 340.0
 ..
-1289
-1290
-PROBLEMMMMMMMMMMMMMMMMMM
-1290
-Inside Pallet No : 6
+Inside Pallet No : 5
 SKU: 103709393 Place ONLY 1 packets  starting from x= 0.0 z= 340.0
 In Orientation X= 340.0 z = 260.0
 ..
-1290
-1291
-PROBLEMMMMMMMMMMMMMMMMMM
-1291
 #################################################################################
 
 Inserting new crate 6
@@ -5381,22 +5273,14 @@ Inserting new crate 6
 Add new  layer in pallet NO 6  Y Remaining: 720
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-Inside Pallet No : 7
+Inside Pallet No : 6
 SKU: 103709393 Place ONLY 3 packets  starting from x= 0.0 z= 0.0
 In Orientation X= 115.0 z = 340.0
 ..
-1291
-1292
-PROBLEMMMMMMMMMMMMMMMMMM
-1292
-Inside Pallet No : 7
+Inside Pallet No : 6
 SKU: 103709393 Place ONLY 3 packets  starting from x= 0.0 z= 340.0
 In Orientation X= 115.0 z = 260.0
 ..
-1292
-1293
-PROBLEMMMMMMMMMMMMMMMMMM
-1293
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 Add new  layer in pallet NO 6  Y Remaining: 380
@@ -7983,59 +7867,35 @@ Inside pallet no : 6
 SKU: 103700627 Place all 5 packets from x= 115.0 z= 36.0
 In Orientation X= 42.0 z = 68.0
 ..
-Inside Pallet No : 7
+Inside Pallet No : 6
 SKU: 103700210 Place ONLY 9 packets  starting from x= 115.0 z= 104.0
 In Orientation X= 30.0 z = 42.0
 ..
-1947
-1948
-PROBLEMMMMMMMMMMMMMMMMMM
-1948
-Inside Pallet No : 7
+Inside Pallet No : 6
 SKU: 103686519 Place ONLY 6 packets  starting from x= 0.0 z= 584.7
 In Orientation X= 65.1 z = 15.0
 ..
-1948
-1949
-PROBLEMMMMMMMMMMMMMMMMMM
-1949
-Inside Pallet No : 7
+Inside Pallet No : 6
 SKU: 103713493 Place ONLY 2 packets  starting from x= 325.0 z= 36.0
 In Orientation X= 33.0 z = 47.0
 ..
-1949
-1950
-PROBLEMMMMMMMMMMMMMMMMMM
-1950
-Inside Pallet No : 7
+Inside Pallet No : 6
 SKU: 100093195 Place ONLY 3 packets  starting from x= 115.0 z= 314.0
 In Orientation X= 81.0 z = 14.0
 ..
-1950
-1951
-PROBLEMMMMMMMMMMMMMMMMMM
-1951
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 Add new  layer in pallet NO 6  Y Remaining: 120
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-Inside Pallet No : 7
+Inside Pallet No : 6
 SKU: 103665821 Place ONLY 8 packets  starting from x= 0.0 z= 0.0
 In Orientation X= 50.0 z = 76.0
 ..
-1951
-1952
-PROBLEMMMMMMMMMMMMMMMMMM
-1952
-Inside Pallet No : 7
+Inside Pallet No : 6
 SKU: 103707186 Place ONLY 2 packets  starting from x= 0.0 z= 532.0
 In Orientation X= 200.0 z = 30.0
 ..
-1952
-1953
-PROBLEMMMMMMMMMMMMMMMMMM
-1953
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 Add new  layer in pallet NO 6  Y Remaining: 75
@@ -8049,14 +7909,10 @@ Inside pallet no : 6
 SKU: 100087318 Place all 3 packets from x= 0.0 z= 154.0
 In Orientation X= 80.0 z = 220.0
 ..
-Inside Pallet No : 7
+Inside Pallet No : 6
 SKU: 103715141 Place ONLY 4 packets  starting from x= 0.0 z= 374.0
 In Orientation X= 98.0 z = 172.0
 ..
-1953
-1954
-PROBLEMMMMMMMMMMMMMMMMMM
-1954
 #################################################################################
 
 Inserting new crate 7
@@ -8095,22 +7951,14 @@ Inside pallet no : 7
 SKU: 103715141 Place all 2 packets from x= 200.0 z= 0.0
 In Orientation X= 98.0 z = 31.0
 ..
-Inside Pallet No : 8
+Inside Pallet No : 7
 SKU: 103709391 Place ONLY 5 packets  starting from x= 0.0 z= 76.0
 In Orientation X= 70.0 z = 435.0
 ..
-1954
-1955
-PROBLEMMMMMMMMMMMMMMMMMM
-1955
-Inside Pallet No : 8
+Inside Pallet No : 7
 SKU: 103709391 Place ONLY 1 packets  starting from x= 0.0 z= 511.0
 In Orientation X= 255.0 z = 70.0
 ..
-1955
-1956
-PROBLEMMMMMMMMMMMMMMMMMM
-1956
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 Add new  layer in pallet NO 7  Y Remaining: 285
@@ -9877,30 +9725,18 @@ Inside pallet no : 7
 SKU: 103685685 Place all 9 packets from x= 180.0 z= 595.2
 In Orientation X= 22.0 z = 3.0
 ..
-Inside Pallet No : 8
+Inside Pallet No : 7
 SKU: 103707152 Place ONLY 7 packets  starting from x= 350.0 z= 49.0
 In Orientation X= 7.0 z = 14.5
 ..
-2567
-2568
-PROBLEMMMMMMMMMMMMMMMMMM
-2568
-Inside Pallet No : 8
+Inside Pallet No : 7
 SKU: 103700396 Place ONLY 3 packets  starting from x= 377.0 z= 563.7
 In Orientation X= 7.0 z = 14.5
 ..
-2568
-2569
-PROBLEMMMMMMMMMMMMMMMMMM
-2569
-Inside Pallet No : 8
+Inside Pallet No : 7
 SKU: 103711609 Place ONLY 6 packets  starting from x= 279.8 z= 545.7
 In Orientation X= 20.0 z = 5.0
 ..
-2569
-2570
-PROBLEMMMMMMMMMMMMMMMMMM
-2570
 Inside pallet no : 7
 SKU: 103681770 Place all 3 packets from x= 348.0 z= 580.7
 In Orientation X= 16.0 z = 4.8
@@ -9909,14 +9745,10 @@ Inside pallet no : 7
 SKU: 103711341 Place all 3 packets from x= 312.0 z= 471.0
 In Orientation X= 24.0 z = 3.0
 ..
-Inside Pallet No : 8
+Inside Pallet No : 7
 SKU: 103669278 Place ONLY 2 packets  starting from x= 370.5 z= 524.7
 In Orientation X= 14.0 z = 10.0
 ..
-2570
-2571
-PROBLEMMMMMMMMMMMMMMMMMM
-2571
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 Add new  layer in pallet NO 7  Y Remaining: 30
@@ -10350,22 +10182,14 @@ Inside pallet no : 7
 SKU: 103664801 Place all 7 packets from x= 108.0 z= 579.7
 In Orientation X= 26.7 z = 18.4
 ..
-Inside Pallet No : 8
+Inside Pallet No : 7
 SKU: 103666965 Place ONLY 3 packets  starting from x= 259.9 z= 185.4
 In Orientation X= 43.0 z = 10.0
 ..
-2571
-2572
-PROBLEMMMMMMMMMMMMMMMMMM
-2572
-Inside Pallet No : 8
+Inside Pallet No : 7
 SKU: 103667269 Place ONLY 2 packets  starting from x= 359.5 z= 359.2
 In Orientation X= 20.0 z = 20.0
 ..
-2572
-2573
-PROBLEMMMMMMMMMMMMMMMMMM
-2573
 #################################################################################
 
 Inserting new crate 8
@@ -10540,54 +10364,34 @@ Inside pallet no : 8
 SKU: 103670831 Place all 9 packets from x= 254.0 z= 489.1
 In Orientation X= 13.0 z = 54.0
 ..
-Inside Pallet No : 9
+Inside Pallet No : 8
 SKU: 103668365 Place ONLY 3 packets  starting from x= 266.0 z= 391.1
 In Orientation X= 42.0 z = 26.0
 ..
-2573
-2574
-PROBLEMMMMMMMMMMMMMMMMMM
-2574
 Inside pallet no : 8
 SKU: 103671508 Place all 8 packets from x= 0.0 z= 576.9
 In Orientation X= 40.0 z = 18.0
 ..
-Inside Pallet No : 9
+Inside Pallet No : 8
 SKU: 103707154 Place ONLY 3 packets  starting from x= 276.5 z= 543.9
 In Orientation X= 40.0 z = 18.0
 ..
-2574
-2575
-PROBLEMMMMMMMMMMMMMMMMMM
-2575
 Inside pallet no : 8
 SKU: 103716131 Place all 5 packets from x= 55.9 z= 243.1
 In Orientation X= 45.0 z = 14.0
 ..
-Inside Pallet No : 9
+Inside Pallet No : 8
 SKU: 103700458 Place ONLY 1 packets  starting from x= 355.0 z= 456.1
 In Orientation X= 36.0 z = 24.0
 ..
-2575
-2576
-PROBLEMMMMMMMMMMMMMMMMMM
-2576
-Inside Pallet No : 9
+Inside Pallet No : 8
 SKU: 103711689 Place ONLY 1 packets  starting from x= 347.0 z= 345.6
 In Orientation X= 39.5 z = 32.2
 ..
-2576
-2577
-PROBLEMMMMMMMMMMMMMMMMMM
-2577
-Inside Pallet No : 9
+Inside Pallet No : 8
 SKU: 103664687 Place ONLY 1 packets  starting from x= 351.0 z= 425.1
 In Orientation X= 39.0 z = 27.0
 ..
-2577
-2578
-PROBLEMMMMMMMMMMMMMMMMMM
-2578
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 Add new  layer in pallet NO 8  Y Remaining: 605
@@ -10601,14 +10405,10 @@ Inside pallet no : 8
 SKU: 100012172 Place all 3 packets from x= 0.0 z= 68.0
 In Orientation X= 31.0 z = 95.5
 ..
-Inside Pallet No : 9
+Inside Pallet No : 8
 SKU: 103696597 Place ONLY 10 packets  starting from x= 0.0 z= 163.5
 In Orientation X= 38.0 z = 68.0
 ..
-2578
-2579
-PROBLEMMMMMMMMMMMMMMMMMM
-2579
 Inside pallet no : 8
 SKU: 103700132 Place all 5 packets from x= 93.0 z= 68.0
 In Orientation X= 47.0 z = 79.0
@@ -10617,35 +10417,23 @@ Inside pallet no : 8
 SKU: 103707363 Place all 4 packets from x= 0.0 z= 571.5
 In Orientation X= 33.0 z = 19.0
 ..
-Inside Pallet No : 9
+Inside Pallet No : 8
 SKU: 103696533 Place ONLY 2 packets  starting from x= 328.0 z= 68.0
 In Orientation X= 30.0 z = 58.0
 ..
-2579
-2580
-PROBLEMMMMMMMMMMMMMMMMMM
-2580
-Inside Pallet No : 9
+Inside Pallet No : 8
 SKU: 103686489 Place ONLY 4 packets  starting from x= 132.0 z= 571.5
 In Orientation X= 55.0 z = 18.0
 ..
-2580
-2581
-PROBLEMMMMMMMMMMMMMMMMMM
-2581
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 Add new  layer in pallet NO 8  Y Remaining: 365
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-Inside Pallet No : 9
+Inside Pallet No : 8
 SKU: 103706431 Place ONLY 10 packets  starting from x= 0.0 z= 0.0
 In Orientation X= 40.0 z = 105.0
 ..
-2581
-2582
-PROBLEMMMMMMMMMMMMMMMMMM
-2582
 Inside pallet no : 8
 SKU: 103715155 Place all 7 packets from x= 0.0 z= 525.0
 In Orientation X= 34.0 z = 58.0
@@ -10667,14 +10455,10 @@ Inside pallet no : 8
 SKU: 103698590 Place all 2 packets from x= 0.0 z= 168.0
 In Orientation X= 78.0 z = 216.0
 ..
-Inside Pallet No : 9
+Inside Pallet No : 8
 SKU: 103686549 Place ONLY 3 packets  starting from x= 0.0 z= 384.0
 In Orientation X= 127.0 z = 170.0
 ..
-2582
-2583
-PROBLEMMMMMMMMMMMMMMMMMM
-2583
 #################################################################################
 
 Inserting new crate 9
@@ -10739,14 +10523,10 @@ Inserting new crate 10
 Add new  layer in pallet NO 10  Y Remaining: 720
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-Inside Pallet No : 11
+Inside Pallet No : 10
 SKU: 103709673 Place ONLY 1 packets  starting from x= 0.0 z= 0.0
 In Orientation X= 390.0 z = 450.0
 ..
-2583
-2584
-PROBLEMMMMMMMMMMMMMMMMMM
-2584
 #################################################################################
 
 Inserting new crate 11
@@ -10757,14 +10537,10 @@ Inserting new crate 11
 Add new  layer in pallet NO 11  Y Remaining: 720
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-Inside Pallet No : 12
+Inside Pallet No : 11
 SKU: 103709673 Place ONLY 1 packets  starting from x= 0.0 z= 0.0
 In Orientation X= 390.0 z = 450.0
 ..
-2584
-2585
-PROBLEMMMMMMMMMMMMMMMMMM
-2585
 #################################################################################
 
 Inserting new crate 12
@@ -10775,14 +10551,10 @@ Inserting new crate 12
 Add new  layer in pallet NO 12  Y Remaining: 720
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-Inside Pallet No : 13
+Inside Pallet No : 12
 SKU: 103709673 Place ONLY 1 packets  starting from x= 0.0 z= 0.0
 In Orientation X= 390.0 z = 450.0
 ..
-2585
-2586
-PROBLEMMMMMMMMMMMMMMMMMM
-2586
 #################################################################################
 
 Inserting new crate 13
@@ -10793,14 +10565,10 @@ Inserting new crate 13
 Add new  layer in pallet NO 13  Y Remaining: 720
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-Inside Pallet No : 14
+Inside Pallet No : 13
 SKU: 103709673 Place ONLY 1 packets  starting from x= 0.0 z= 0.0
 In Orientation X= 390.0 z = 450.0
 ..
-2586
-2587
-PROBLEMMMMMMMMMMMMMMMMMM
-2587
 #################################################################################
 
 Inserting new crate 14
@@ -10811,14 +10579,10 @@ Inserting new crate 14
 Add new  layer in pallet NO 14  Y Remaining: 720
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-Inside Pallet No : 15
+Inside Pallet No : 14
 SKU: 103709673 Place ONLY 1 packets  starting from x= 0.0 z= 0.0
 In Orientation X= 390.0 z = 450.0
 ..
-2587
-2588
-PROBLEMMMMMMMMMMMMMMMMMM
-2588
 #################################################################################
 
 Inserting new crate 15
@@ -10829,14 +10593,10 @@ Inserting new crate 15
 Add new  layer in pallet NO 15  Y Remaining: 720
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-Inside Pallet No : 16
+Inside Pallet No : 15
 SKU: 103709673 Place ONLY 1 packets  starting from x= 0.0 z= 0.0
 In Orientation X= 390.0 z = 450.0
 ..
-2588
-2589
-PROBLEMMMMMMMMMMMMMMMMMM
-2589
 #################################################################################
 
 Inserting new crate 16
@@ -13302,14 +13062,10 @@ Inside pallet no : 11
 SKU: 103664535 Place all 3 packets from x= 0.0 z= 555.9
 In Orientation X= 87.0 z = 43.6
 ..
-Inside Pallet No : 17
+Inside Pallet No : 12
 SKU: 103665445 Place ONLY 8 packets  starting from x= 0.0 z= 468.0
 In Orientation X= 48.5 z = 80.5
 ..
-3208
-3209
-PROBLEMMMMMMMMMMMMMMMMMM
-3209
 Inside pallet no : 11
 SKU: 103715177 Place all 8 packets from x= 126.0 z= 415.9
 In Orientation X= 31.0 z = 55.0
@@ -13331,14 +13087,10 @@ In Orientation X= 50.0 z = 85.0
 Add new  layer in pallet NO 6  Y Remaining: 46
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-Inside Pallet No : 17
+Inside Pallet No : 11
 SKU: 103698586 Place ONLY 7 packets  starting from x= 0.0 z= 0.0
 In Orientation X= 52.0 z = 199.0
 ..
-3209
-3210
-PROBLEMMMMMMMMMMMMMMMMMM
-3210
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 Add new  layer in pallet NO 7  Y Remaining: 105
@@ -13353,22 +13105,14 @@ In Orientation X= 195.0 z = 352.0
 Add new  layer in pallet NO 7  Y Remaining: 82
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-Inside Pallet No : 17
+Inside Pallet No : 12
 SKU: 103696099 Place ONLY 1 packets  starting from x= 0.0 z= 0.0
 In Orientation X= 383.0 z = 270.0
 ..
-3210
-3211
-PROBLEMMMMMMMMMMMMMMMMMM
-3211
-Inside Pallet No : 17
+Inside Pallet No : 13
 SKU: 103712719 Place ONLY 4 packets  starting from x= 0.0 z= 188.0
 In Orientation X= 92.0 z = 235.0
 ..
-3211
-3212
-PROBLEMMMMMMMMMMMMMMMMMM
-3212
 Inside pallet no : 12
 SKU: 103665445 Place all 2 packets from x= 0.0 z= 540.0
 In Orientation X= 80.5 z = 48.5
@@ -13381,14 +13125,10 @@ Inside pallet no : 9
 SKU: 103696099 Place all 10 packets from x= 0.0 z= 0.0
 In Orientation X= 32.0 z = 383.0
 ..
-Inside Pallet No : 17
+Inside Pallet No : 14
 SKU: 103712719 Place ONLY 4 packets  starting from x= 0.0 z= 199.0
 In Orientation X= 92.0 z = 235.0
 ..
-3212
-3213
-PROBLEMMMMMMMMMMMMMMMMMM
-3213
 Inside pallet no : 15
 SKU: 103712719 Place all 2 packets from x= 0.0 z= 0.0
 In Orientation X= 165.0 z = 235.0
@@ -15950,70 +15690,38 @@ Inside pallet no : 16
 SKU: 103713541 Place all 7 packets from x= 154.0 z= 495.2
 In Orientation X= 24.0 z = 36.0
 ..
-Inside Pallet No : 17
+Inside Pallet No : 16
 SKU: 103713557 Place ONLY 10 packets  starting from x= 154.0 z= 531.2
 In Orientation X= 24.0 z = 36.0
 ..
-3876
-3877
-PROBLEMMMMMMMMMMMMMMMMMM
-3877
-Inside Pallet No : 17
+Inside Pallet No : 9
 SKU: 103713581 Place ONLY 5 packets  starting from x= 280.0 z= 466.0
 In Orientation X= 24.0 z = 36.0
 ..
-3877
-3878
-PROBLEMMMMMMMMMMMMMMMMMM
-3878
-Inside Pallet No : 17
+Inside Pallet No : 8
 SKU: 103686467 Place ONLY 6 packets  starting from x= 0.0 z= 225.0
 In Orientation X= 61.0 z = 59.7
 ..
-3878
-3879
-PROBLEMMMMMMMMMMMMMMMMMM
-3879
-Inside Pallet No : 17
+Inside Pallet No : 9
 SKU: 103665713 Place ONLY 3 packets  starting from x= 320.0 z= 0.0
 In Orientation X= 26.0 z = 37.0
 ..
-3879
-3880
-PROBLEMMMMMMMMMMMMMMMMMM
-3880
-Inside Pallet No : 17
+Inside Pallet No : 9
 SKU: 103664631 Place ONLY 4 packets  starting from x= 294.0 z= 516.0
 In Orientation X= 26.3 z = 28.0
 ..
-3880
-3881
-PROBLEMMMMMMMMMMMMMMMMMM
-3881
-Inside Pallet No : 17
+Inside Pallet No : 15
 SKU: 100087182 Place ONLY 5 packets  starting from x= 121.0 z= 374.1
 In Orientation X= 51.5 z = 14.5
 ..
-3881
-3882
-PROBLEMMMMMMMMMMMMMMMMMM
-3882
-Inside Pallet No : 17
+Inside Pallet No : 16
 SKU: 103684289 Place ONLY 5 packets  starting from x= 308.0 z= 450.0
 In Orientation X= 16.0 z = 40.0
 ..
-3882
-3883
-PROBLEMMMMMMMMMMMMMMMMMM
-3883
-Inside Pallet No : 17
+Inside Pallet No : 15
 SKU: 103711519 Place ONLY 1 packets  starting from x= 330.0 z= 30.0
 In Orientation X= 68.0 z = 38.0
 ..
-3883
-3884
-PROBLEMMMMMMMMMMMMMMMMMM
-3884
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 Add new  layer in pallet NO 10  Y Remaining: 93
@@ -16055,69 +15763,45 @@ Inside pallet no : 15
 SKU: 100093136 Place all 6 packets from x= 0.0 z= 420.9
 In Orientation X= 14.0 z = 140.0
 ..
-Inside Pallet No : 17
+Inside Pallet No : 14
 SKU: 103707182 Place ONLY 7 packets  starting from x= 0.0 z= 220.0
 In Orientation X= 55.0 z = 180.0
 ..
-3884
-3885
-PROBLEMMMMMMMMMMMMMMMMMM
-3885
-Inside Pallet No : 17
+Inside Pallet No : 15
 SKU: 103715165 Place ONLY 1 packets  starting from x= 84.0 z= 420.9
 In Orientation X= 172.0 z = 98.0
 ..
-3885
-3886
-PROBLEMMMMMMMMMMMMMMMMMM
-3886
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 Add new  layer in pallet NO 15  Y Remaining: 87
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-Inside Pallet No : 17
+Inside Pallet No : 9
 SKU: 103700230 Place ONLY 7 packets  starting from x= 0.0 z= 0.0
 In Orientation X= 54.0 z = 205.0
 ..
-3886
-3887
-PROBLEMMMMMMMMMMMMMMMMMM
-3887
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 Add new  layer in pallet NO 16  Y Remaining: 185
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-Inside Pallet No : 17
+Inside Pallet No : 16
 SKU: 103700547 Place ONLY 2 packets  starting from x= 0.0 z= 0.0
 In Orientation X= 200.0 z = 235.0
 ..
-3887
-3888
-PROBLEMMMMMMMMMMMMMMMMMM
-3888
-Inside Pallet No : 17
+Inside Pallet No : 16
 SKU: 103715179 Place ONLY 1 packets  starting from x= 0.0 z= 470.0
 In Orientation X= 236.0 z = 111.0
 ..
-3888
-3889
-PROBLEMMMMMMMMMMMMMMMMMM
-3889
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 Add new  layer in pallet NO 16  Y Remaining: 137
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-Inside Pallet No : 17
+Inside Pallet No : 16
 SKU: 103696095 Place ONLY 2 packets  starting from x= 0.0 z= 0.0
 In Orientation X= 145.0 z = 255.0
 ..
-3889
-3890
-PROBLEMMMMMMMMMMMMMMMMMM
-3890
 #################################################################################
 
 Inserting new crate 17
@@ -16185,35 +15869,23 @@ Inside pallet no : 16
 SKU: 103715179 Place all 1 packets from x= 0.0 z= 225.0
 In Orientation X= 111.0 z = 236.0
 ..
-Inside Pallet No : 18
+Inside Pallet No : 17
 SKU: 103696095 Place ONLY 4 packets  starting from x= 0.0 z= 375.0
 In Orientation X= 82.0 z = 145.0
 ..
-3890
-3891
-PROBLEMMMMMMMMMMMMMMMMMM
-3891
-Inside Pallet No : 18
+Inside Pallet No : 17
 SKU: 103702033 Place ONLY 1 packets  starting from x= 120.0 z= 140.0
 In Orientation X= 217.0 z = 185.0
 ..
-3891
-3892
-PROBLEMMMMMMMMMMMMMMMMMM
-3892
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 Add new  layer in pallet NO 17  Y Remaining: 465
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-Inside Pallet No : 18
+Inside Pallet No : 17
 SKU: 103696095 Place ONLY 4 packets  starting from x= 0.0 z= 0.0
 In Orientation X= 82.0 z = 145.0
 ..
-3892
-3893
-PROBLEMMMMMMMMMMMMMMMMMM
-3893
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 Add new  layer in pallet NO 17  Y Remaining: 210
@@ -16223,14 +15895,10 @@ Inside pallet no : 17
 SKU: 103696095 Place all 2 packets from x= 0.0 z= 0.0
 In Orientation X= 145.0 z = 255.0
 ..
-Inside Pallet No : 18
+Inside Pallet No : 17
 SKU: 103702033 Place ONLY 1 packets  starting from x= 0.0 z= 255.0
 In Orientation X= 217.0 z = 217.0
 ..
-3893
-3894
-PROBLEMMMMMMMMMMMMMMMMMM
-3894
 #################################################################################
 
 Inserting new crate 18
@@ -16241,27 +15909,19 @@ Inserting new crate 18
 Add new  layer in pallet NO 18  Y Remaining: 720
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-Inside Pallet No : 19
+Inside Pallet No : 18
 SKU: 103702033 Place ONLY 2 packets  starting from x= 0.0 z= 0.0
 In Orientation X= 185.0 z = 217.0
 ..
-3894
-3895
-PROBLEMMMMMMMMMMMMMMMMMM
-3895
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 Add new  layer in pallet NO 18  Y Remaining: 503
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-Inside Pallet No : 19
+Inside Pallet No : 18
 SKU: 103702033 Place ONLY 2 packets  starting from x= 0.0 z= 0.0
 In Orientation X= 185.0 z = 217.0
 ..
-3895
-3896
-PROBLEMMMMMMMMMMMMMMMMMM
-3896
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 Add new  layer in pallet NO 18  Y Remaining: 286
@@ -18616,50 +18276,30 @@ Inside pallet no : 18
 SKU: 103684171 Place all 3 packets from x= 352.0 z= 456.7
 In Orientation X= 14.5 z = 51.5
 ..
-Inside Pallet No : 19
+Inside Pallet No : 18
 SKU: 103669427 Place ONLY 8 packets  starting from x= 145.0 z= 517.7
 In Orientation X= 30.0 z = 44.0
 ..
-4502
-4503
-PROBLEMMMMMMMMMMMMMMMMMM
-4503
-Inside Pallet No : 19
+Inside Pallet No : 18
 SKU: 103686191 Place ONLY 4 packets  starting from x= 145.0 z= 561.7
 In Orientation X= 55.0 z = 18.5
 ..
-4503
-4504
-PROBLEMMMMMMMMMMMMMMMMMM
-4504
-Inside Pallet No : 19
+Inside Pallet No : 18
 SKU: 103713571 Place ONLY 2 packets  starting from x= 280.4 z= 353.7
 In Orientation X= 45.0 z = 27.0
 ..
-4504
-4505
-PROBLEMMMMMMMMMMMMMMMMMM
-4505
 Inside pallet no : 18
 SKU: 103684273 Place all 4 packets from x= 145.0 z= 580.2
 In Orientation X= 58.4 z = 15.6
 ..
-Inside Pallet No : 19
+Inside Pallet No : 18
 SKU: 103684401 Place ONLY 3 packets  starting from x= 277.8 z= 217.0
 In Orientation X= 40.0 z = 16.0
 ..
-4505
-4506
-PROBLEMMMMMMMMMMMMMMMMMM
-4506
-Inside Pallet No : 19
+Inside Pallet No : 18
 SKU: 103700338 Place ONLY 1 packets  starting from x= 348.0 z= 281.7
 In Orientation X= 47.0 z = 33.0
 ..
-4506
-4507
-PROBLEMMMMMMMMMMMMMMMMMM
-4507
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 Add new  layer in pallet NO 18  Y Remaining: 69
@@ -18693,30 +18333,18 @@ Inside pallet no : 18
 SKU: 103698488 Place all 2 packets from x= 0.0 z= 554.0
 In Orientation X= 150.0 z = 30.0
 ..
-Inside Pallet No : 19
+Inside Pallet No : 18
 SKU: 103707222 Place ONLY 1 packets  starting from x= 188.0 z= 158.0
 In Orientation X= 205.0 z = 24.0
 ..
-4507
-4508
-PROBLEMMMMMMMMMMMMMMMMMM
-4508
-Inside Pallet No : 19
+Inside Pallet No : 18
 SKU: 103696373 Place ONLY 2 packets  starting from x= 216.0 z= 329.0
 In Orientation X= 80.0 z = 110.0
 ..
-4508
-4509
-PROBLEMMMMMMMMMMMMMMMMMM
-4509
-Inside Pallet No : 19
+Inside Pallet No : 18
 SKU: 103702095 Place ONLY 1 packets  starting from x= 216.0 z= 439.0
 In Orientation X= 150.0 z = 40.0
 ..
-4509
-4510
-PROBLEMMMMMMMMMMMMMMMMMM
-4510
 #################################################################################
 
 Inserting new crate 19
@@ -18755,35 +18383,23 @@ Inside pallet no : 19
 SKU: 103696373 Place all 5 packets from x= 64.0 z= 107.0
 In Orientation X= 38.0 z = 80.0
 ..
-Inside Pallet No : 20
+Inside Pallet No : 19
 SKU: 103702095 Place ONLY 10 packets  starting from x= 0.0 z= 200.0
 In Orientation X= 40.0 z = 60.0
 ..
-4510
-4511
-PROBLEMMMMMMMMMMMMMMMMMM
-4511
-Inside Pallet No : 20
+Inside Pallet No : 19
 SKU: 103715147 Place ONLY 1 packets  starting from x= 254.0 z= 107.0
 In Orientation X= 111.0 z = 48.0
 ..
-4511
-4512
-PROBLEMMMMMMMMMMMMMMMMMM
-4512
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 Add new  layer in pallet NO 19  Y Remaining: 484
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-Inside Pallet No : 20
+Inside Pallet No : 19
 SKU: 103712721 Place ONLY 4 packets  starting from x= 0.0 z= 0.0
 In Orientation X= 92.0 z = 195.0
 ..
-4512
-4513
-PROBLEMMMMMMMMMMMMMMMMMM
-4513
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 Add new  layer in pallet NO 19  Y Remaining: 309
@@ -18807,22 +18423,14 @@ Inside pallet no : 19
 SKU: 103702095 Place all 1 packets from x= 180.0 z= 0.0
 In Orientation X= 60.0 z = 150.0
 ..
-Inside Pallet No : 21
+Inside Pallet No : 19
 SKU: 103715147 Place ONLY 8 packets  starting from x= 0.0 z= 330.0
 In Orientation X= 48.0 z = 111.0
 ..
-4513
-4514
-PROBLEMMMMMMMMMMMMMMMMMM
-4514
-Inside Pallet No : 21
+Inside Pallet No : 20
 SKU: 103712721 Place ONLY 4 packets  starting from x= 0.0 z= 0.0
 In Orientation X= 92.0 z = 195.0
 ..
-4514
-4515
-PROBLEMMMMMMMMMMMMMMMMMM
-4515
 #################################################################################
 
 Inserting new crate 21
@@ -18841,14 +18449,10 @@ Inside pallet no : 20
 SKU: 103712721 Place all 4 packets from x= 0.0 z= 0.0
 In Orientation X= 92.0 z = 195.0
 ..
-Inside Pallet No : 22
+Inside Pallet No : 21
 SKU: 103709731 Place ONLY 1 packets  starting from x= 0.0 z= 0.0
 In Orientation X= 375.0 z = 540.0
 ..
-4515
-4516
-PROBLEMMMMMMMMMMMMMMMMMM
-4516
 #################################################################################
 
 Inserting new crate 22
@@ -21353,40 +20957,28 @@ Inside pallet no : 22
 SKU: 100079211 Place all 3 packets from x= 0.0 z= 540.0
 In Orientation X= 35.0 z = 35.0
 ..
-Inside Pallet No : 23
+Inside Pallet No : 19
 SKU: 103665633 Place ONLY 2 packets  starting from x= 198.0 z= 269.5
 In Orientation X= 89.0 z = 60.0
 ..
-5141
-5142
-PROBLEMMMMMMMMMMMMMMMMMM
-5142
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 Add new  layer in pallet NO 21  Y Remaining: 140
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-Inside Pallet No : 23
+Inside Pallet No : 20
 SKU: 103684191 Place ONLY 6 packets  starting from x= 0.0 z= 0.0
 In Orientation X= 60.5 z = 95.0
 ..
-5142
-5143
-PROBLEMMMMMMMMMMMMMMMMMM
-5143
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 Add new  layer in pallet NO 21  Y Remaining: 79.5
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-Inside Pallet No : 23
+Inside Pallet No : 20
 SKU: 103664735 Place ONLY 6 packets  starting from x= 0.0 z= 0.0
 In Orientation X= 63.0 z = 91.0
 ..
-5143
-5144
-PROBLEMMMMMMMMMMMMMMMMMM
-5144
 #################################################################################
 
 Inserting new crate 23
@@ -21397,14 +20989,10 @@ Inserting new crate 23
 Add new  layer in pallet NO 23  Y Remaining: 720
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-Inside Pallet No : 24
+Inside Pallet No : 23
 SKU: 103665633 Place ONLY 6 packets  starting from x= 0.0 z= 0.0
 In Orientation X= 60.0 z = 89.0
 ..
-5144
-5145
-PROBLEMMMMMMMMMMMMMMMMMM
-5145
 Inside pallet no : 23
 SKU: 103684191 Place all 5 packets from x= 0.0 z= 534.0
 In Orientation X= 60.5 z = 60.5
@@ -23487,78 +23075,46 @@ Inside pallet no : 23
 SKU: 100078403 Place all 5 packets from x= 256.8 z= 563.0
 In Orientation X= 20.5 z = 12.0
 ..
-Inside Pallet No : 24
+Inside Pallet No : 23
 SKU: 100078446 Place ONLY 3 packets  starting from x= 359.3 z= 563.0
 In Orientation X= 13.0 z = 12.0
 ..
-5786
-5787
-PROBLEMMMMMMMMMMMMMMMMMM
-5787
-Inside Pallet No : 24
+Inside Pallet No : 23
 SKU: 103678181 Place ONLY 6 packets  starting from x= 356.0 z= 107.0
 In Orientation X= 6.6 z = 27.0
 ..
-5787
-5788
-PROBLEMMMMMMMMMMMMMMMMMM
-5788
-Inside Pallet No : 24
+Inside Pallet No : 23
 SKU: 103675693 Place ONLY 2 packets  starting from x= 356.0 z= 323.0
 In Orientation X= 18.5 z = 6.6
 ..
-5788
-5789
-PROBLEMMMMMMMMMMMMMMMMMM
-5789
 Inside pallet no : 20
 SKU: 103678295 Place all 11 packets from x= 0.0 z= 411.4
 In Orientation X= 36.0 z = 28.5
 ..
-Inside Pallet No : 24
+Inside Pallet No : 23
 SKU: 103685158 Place ONLY 1 packets  starting from x= 370.5 z= 542.0
 In Orientation X= 17.8 z = 6.8
 ..
-5789
-5790
-PROBLEMMMMMMMMMMMMMMMMMM
-5790
-Inside Pallet No : 24
+Inside Pallet No : 23
 SKU: 103700250 Place ONLY 1 packets  starting from x= 369.6 z= 47.5
 In Orientation X= 17.8 z = 6.8
 ..
-5790
-5791
-PROBLEMMMMMMMMMMMMMMMMMM
-5791
-Inside Pallet No : 24
+Inside Pallet No : 23
 SKU: 103685324 Place ONLY 2 packets  starting from x= 370.0 z= 360.0
 In Orientation X= 11.6 z = 11.6
 ..
-5791
-5792
-PROBLEMMMMMMMMMMMMMMMMMM
-5792
-Inside Pallet No : 24
+Inside Pallet No : 23
 SKU: 103676032 Place ONLY 2 packets  starting from x= 366.1 z= 530.0
 In Orientation X= 15.0 z = 8.4
 ..
-5792
-5793
-PROBLEMMMMMMMMMMMMMMMMMM
-5793
 Inside pallet no : 20
 SKU: 103692702 Place all 9 packets from x= 0.0 z= 439.9
 In Orientation X= 29.0 z = 30.0
 ..
-Inside Pallet No : 24
+Inside Pallet No : 23
 SKU: 103675725 Place ONLY 1 packets  starting from x= 390.0 z= 374.5
 In Orientation X= 8.5 z = 20.0
 ..
-5793
-5794
-PROBLEMMMMMMMMMMMMMMMMMM
-5794
 Inside pallet no : 20
 SKU: 103678253 Place all 7 packets from x= 0.0 z= 469.9
 In Orientation X= 35.6 z = 30.5
@@ -23571,14 +23127,10 @@ Inside pallet no : 20
 SKU: 103714925 Place all 7 packets from x= 0.0 z= 500.4
 In Orientation X= 29.0 z = 31.0
 ..
-Inside Pallet No : 24
+Inside Pallet No : 23
 SKU: 103665515 Place ONLY 1 packets  starting from x= 376.8 z= 550.0
 In Orientation X= 17.3 z = 12.9
 ..
-5794
-5795
-PROBLEMMMMMMMMMMMMMMMMMM
-5795
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 Add new  layer in pallet NO 23  Y Remaining: 550.5
@@ -23993,46 +23545,26 @@ Inside pallet no : 23
 SKU: 103665715 Place all 5 packets from x= 186.0 z= 423.6
 In Orientation X= 33.0 z = 47.0
 ..
-Inside Pallet No : 24
+Inside Pallet No : 23
 SKU: 103684435 Place ONLY 3 packets  starting from x= 186.0 z= 470.6
 In Orientation X= 68.1 z = 17.5
 ..
-5795
-5796
-PROBLEMMMMMMMMMMMMMMMMMM
-5796
-Inside Pallet No : 24
+Inside Pallet No : 23
 SKU: 103684399 Place ONLY 4 packets  starting from x= 324.0 z= 368.6
 In Orientation X= 18.0 z = 55.0
 ..
-5796
-5797
-PROBLEMMMMMMMMMMMMMMMMMM
-5797
-Inside Pallet No : 24
+Inside Pallet No : 23
 SKU: 100048204 Place ONLY 3 packets  starting from x= 144.0 z= 0.0
 In Orientation X= 81.0 z = 14.0
 ..
-5797
-5798
-PROBLEMMMMMMMMMMMMMMMMMM
-5798
-Inside Pallet No : 24
+Inside Pallet No : 23
 SKU: 103671049 Place ONLY 3 packets  starting from x= 277.2 z= 213.2
 In Orientation X= 36.0 z = 41.0
 ..
-5798
-5799
-PROBLEMMMMMMMMMMMMMMMMMM
-5799
-Inside Pallet No : 24
+Inside Pallet No : 23
 SKU: 100041070 Place ONLY 1 packets  starting from x= 300.0 z= 488.6
 In Orientation X= 87.0 z = 43.6
 ..
-5799
-5800
-PROBLEMMMMMMMMMMMMMMMMMM
-5800
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 Add new  layer in pallet NO 23  Y Remaining: 337.5
@@ -24050,14 +23582,10 @@ Inside pallet no : 23
 SKU: 100078155 Place all 7 packets from x= 0.0 z= 80.0
 In Orientation X= 31.0 z = 229.0
 ..
-Inside Pallet No : 24
+Inside Pallet No : 23
 SKU: 103686527 Place ONLY 7 packets  starting from x= 0.0 z= 309.0
 In Orientation X= 52.5 z = 94.0
 ..
-5800
-5801
-PROBLEMMMMMMMMMMMMMMMMMM
-5801
 Inside pallet no : 23
 SKU: 103698546 Place all 9 packets from x= 217.0 z= 80.0
 In Orientation X= 20.0 z = 215.0
@@ -24067,14 +23595,10 @@ In Orientation X= 20.0 z = 215.0
 Add new  layer in pallet NO 23  Y Remaining: 102.5
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-Inside Pallet No : 24
+Inside Pallet No : 23
 SKU: 103696107 Place ONLY 2 packets  starting from x= 0.0 z= 0.0
 In Orientation X= 145.0 z = 179.0
 ..
-5801
-5802
-PROBLEMMMMMMMMMMMMMMMMMM
-5802
 Inside pallet no : 23
 SKU: 100078446 Place all 7 packets from x= 290.0 z= 358.0
 In Orientation X= 12.0 z = 20.5
@@ -24119,14 +23643,10 @@ Inside pallet no : 23
 SKU: 103684399 Place all 1 packets from x= 0.0 z= 554.5
 In Orientation X= 160.0 z = 18.0
 ..
-Inside Pallet No : 24
+Inside Pallet No : 23
 SKU: 100048204 Place ONLY 2 packets  starting from x= 0.0 z= 572.5
 In Orientation X= 140.0 z = 14.0
 ..
-5802
-5803
-PROBLEMMMMMMMMMMMMMMMMMM
-5803
 #################################################################################
 
 Inserting new crate 24
@@ -26326,74 +25846,42 @@ Inside pallet no : 24
 SKU: 103713387 Place all 11 packets from x= 0.0 z= 586.4
 In Orientation X= 16.0 z = 10.0
 ..
-Inside Pallet No : 25
+Inside Pallet No : 24
 SKU: 103670793 Place ONLY 8 packets  starting from x= 176.0 z= 586.4
 In Orientation X= 28.0 z = 4.0
 ..
-6453
-6454
-PROBLEMMMMMMMMMMMMMMMMMM
-6454
 Inside pallet no : 24
 SKU: 103668367 Place all 8 packets from x= 313.8 z= 548.9
 In Orientation X= 10.5 z = 17.0
 ..
-Inside Pallet No : 25
+Inside Pallet No : 24
 SKU: 100063084 Place ONLY 3 packets  starting from x= 335.1 z= 222.9
 In Orientation X= 17.0 z = 8.0
 ..
-6454
-6455
-PROBLEMMMMMMMMMMMMMMMMMM
-6455
-Inside Pallet No : 25
+Inside Pallet No : 24
 SKU: 103695843 Place ONLY 3 packets  starting from x= 341.0 z= 509.9
 In Orientation X= 18.2 z = 10.8
 ..
-6455
-6456
-PROBLEMMMMMMMMMMMMMMMMMM
-6456
-Inside Pallet No : 25
+Inside Pallet No : 24
 SKU: 100088599 Place ONLY 5 packets  starting from x= 273.0 z= 566.9
 In Orientation X= 23.0 z = 5.0
 ..
-6456
-6457
-PROBLEMMMMMMMMMMMMMMMMMM
-6457
-Inside Pallet No : 25
+Inside Pallet No : 24
 SKU: 103691703 Place ONLY 1 packets  starting from x= 378.3 z= 348.0
 In Orientation X= 20.6 z = 14.0
 ..
-6457
-6458
-PROBLEMMMMMMMMMMMMMMMMMM
-6458
-Inside Pallet No : 25
+Inside Pallet No : 24
 SKU: 103654309 Place ONLY 1 packets  starting from x= 386.0 z= 492.3
 In Orientation X= 11.5 z = 12.0
 ..
-6458
-6459
-PROBLEMMMMMMMMMMMMMMMMMM
-6459
-Inside Pallet No : 25
+Inside Pallet No : 24
 SKU: 103700508 Place ONLY 1 packets  starting from x= 386.2 z= 337.0
 In Orientation X= 13.5 z = 11.0
 ..
-6459
-6460
-PROBLEMMMMMMMMMMMMMMMMMM
-6460
-Inside Pallet No : 25
+Inside Pallet No : 24
 SKU: 103669657 Place ONLY 2 packets  starting from x= 362.0 z= 156.7
 In Orientation X= 17.0 z = 9.5
 ..
-6460
-6461
-PROBLEMMMMMMMMMMMMMMMMMM
-6461
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 Add new  layer in pallet NO 24  Y Remaining: 541
@@ -26651,14 +26139,10 @@ Inside pallet no : 24
 SKU: 103702345 Place all 11 packets from x= 0.0 z= 555.4
 In Orientation X= 31.0 z = 42.0
 ..
-Inside Pallet No : 25
+Inside Pallet No : 24
 SKU: 103714103 Place ONLY 6 packets  starting from x= 210.0 z= 431.4
 In Orientation X= 30.0 z = 30.0
 ..
-6461
-6462
-PROBLEMMMMMMMMMMMMMMMMMM
-6462
 Inside pallet no : 24
 SKU: 103664895 Place all 6 packets from x= 220.0 z= 513.4
 In Orientation X= 18.0 z = 33.0
@@ -26671,14 +26155,10 @@ Inside pallet no : 24
 SKU: 103691821 Place all 2 packets from x= 328.0 z= 513.4
 In Orientation X= 36.0 z = 28.7
 ..
-Inside Pallet No : 25
+Inside Pallet No : 24
 SKU: 103692712 Place ONLY 2 packets  starting from x= 341.0 z= 555.4
 In Orientation X= 28.7 z = 36.0
 ..
-6462
-6463
-PROBLEMMMMMMMMMMMMMMMMMM
-6463
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 Add new  layer in pallet NO 24  Y Remaining: 489
@@ -26764,67 +26244,39 @@ Inside pallet no : 24
 SKU: 103700625 Place all 8 packets from x= 0.0 z= 503.1
 In Orientation X= 47.0 z = 79.0
 ..
-Inside Pallet No : 25
+Inside Pallet No : 24
 SKU: 103713569 Place ONLY 3 packets  starting from x= 290.5 z= 442.1
 In Orientation X= 33.0 z = 47.0
 ..
-6463
-6464
-PROBLEMMMMMMMMMMMMMMMMMM
-6464
-Inside Pallet No : 25
+Inside Pallet No : 24
 SKU: 103696535 Place ONLY 3 packets  starting from x= 314.5 z= 232.0
 In Orientation X= 27.9 z = 54.9
 ..
-6464
-6465
-PROBLEMMMMMMMMMMMMMMMMMM
-6465
-Inside Pallet No : 25
+Inside Pallet No : 24
 SKU: 103712485 Place ONLY 1 packets  starting from x= 334.0 z= 157.0
 In Orientation X= 66.0 z = 24.5
 ..
-6465
-6466
-PROBLEMMMMMMMMMMMMMMMMMM
-6466
-Inside Pallet No : 25
+Inside Pallet No : 24
 SKU: 103715137 Place ONLY 1 packets  starting from x= 337.8 z= 290.0
 In Orientation X= 46.0 z = 30.0
 ..
-6466
-6467
-PROBLEMMMMMMMMMMMMMMMMMM
-6467
-Inside Pallet No : 25
+Inside Pallet No : 24
 SKU: 103715771 Place ONLY 2 packets  starting from x= 360.0 z= 372.1
 In Orientation X= 18.0 z = 55.0
 ..
-6467
-6468
-PROBLEMMMMMMMMMMMMMMMMMM
-6468
-Inside Pallet No : 25
+Inside Pallet No : 24
 SKU: 100088290 Place ONLY 8 packets  starting from x= 0.0 z= 582.1
 In Orientation X= 50.0 z = 14.0
 ..
-6468
-6469
-PROBLEMMMMMMMMMMMMMMMMMM
-6469
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 Add new  layer in pallet NO 24  Y Remaining: 234
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-Inside Pallet No : 25
+Inside Pallet No : 24
 SKU: 103710597 Place ONLY 10 packets  starting from x= 0.0 z= 0.0
 In Orientation X= 40.0 z = 105.0
 ..
-6469
-6470
-PROBLEMMMMMMMMMMMMMMMMMM
-6470
 Inside pallet no : 24
 SKU: 103681531 Place all 10 packets from x= 0.0 z= 525.0
 In Orientation X= 20.0 z = 70.0
@@ -26834,14 +26286,10 @@ In Orientation X= 20.0 z = 70.0
 Add new  layer in pallet NO 24  Y Remaining: 54
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-Inside Pallet No : 25
+Inside Pallet No : 24
 SKU: 103715153 Place ONLY 3 packets  starting from x= 0.0 z= 0.0
 In Orientation X= 111.0 z = 236.0
 ..
-6470
-6471
-PROBLEMMMMMMMMMMMMMMMMMM
-6471
 #################################################################################
 
 Inserting new crate 25
@@ -26920,22 +26368,14 @@ Inside pallet no : 25
 SKU: 103710597 Place all 1 packets from x= 297.0 z= 97.4
 In Orientation X= 40.0 z = 45.0
 ..
-Inside Pallet No : 26
+Inside Pallet No : 25
 SKU: 103715153 Place ONLY 8 packets  starting from x= 0.0 z= 256.4
 In Orientation X= 48.0 z = 111.0
 ..
-6471
-6472
-PROBLEMMMMMMMMMMMMMMMMMM
-6472
-Inside Pallet No : 26
+Inside Pallet No : 25
 SKU: 103696103 Place ONLY 1 packets  starting from x= 184.0 z= 144.4
 In Orientation X= 145.0 z = 48.0
 ..
-6472
-6473
-PROBLEMMMMMMMMMMMMMMMMMM
-6473
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 Add new  layer in pallet NO 25  Y Remaining: 465

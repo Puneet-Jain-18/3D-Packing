@@ -872,7 +872,7 @@ var layer= async function(){
                         let rect=crates[finalCrate].rectangles[rectIndex];
 
 
-                        console.log("Inside Pallet No :",palletNo+1);
+                        console.log("Inside Pallet No :",crates[finalCrate].palletNo);
                         console.log("SKU: "+element.SKU+" Place ONLY "+final.quantity+
                                     " packets  starting from x= "+rect.xStart.toFixed(1)+" z= "+rect.zStart.toFixed(1));
                         console.log("In Orientation X= "+final.packx.toFixed(1)+" z = "+final.packz.toFixed(1));
@@ -885,8 +885,6 @@ var layer= async function(){
                             crates[finalCrate].boxList.push(el);
                         element.quantity=element.quantity-final.quantity;
                        currBoxList.push(element);
-                       
-                   
                     }
                     else
                     {
