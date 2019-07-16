@@ -19,7 +19,7 @@ var cannotBePacked=[];
 //////////////////////////////////
 
 ////currently selecting maximum volume crate
-var insertCrate=function(palletNo,x,z,y)
+var insertCrate=async function(palletNo,x,z,y)
 {
     var newCrate={
         palletNo:palletNo,
@@ -257,18 +257,6 @@ var layer= async function(){
             var rectangle;
             for(var j=0;j<currBoxList.length;j++)
             {
-                
-                if(zflag==1)
-                {
-                    if(vol==currBoxList.length)
-                    {
-                        console.log("PROBLEMMMMMMMMMMMMMMMMMM");
-                        console.log(currBoxList.length)
-                     //   return
-                    }
-                    zflag=0;
-                } 
-
                 element=currBoxList[j];
                 //////////////////////////////////////////////////////////////////////
                 ////////////Check why element is coming again////////////////////////
@@ -658,7 +646,10 @@ var layer= async function(){
                 {
                     palletNo+=1;
             await insertCrate(palletNo,data.crate[crateIndex].length,data.crate[crateIndex].width,data.crate[crateIndex].height);
-                   rectangle=crates[crates.length-1].rectangles[0];
+                    console.log("#################################################################################");
+                    console.log("\nInserting new crate",crates[crates.length-1].palletNo);
+                    console.log("\n#################################################################################");
+                    rectangle=crates[crates.length-1].rectangles[0];
                     var currCrate=crates[crates.length-1];
                     
 
