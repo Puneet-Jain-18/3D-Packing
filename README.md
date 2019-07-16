@@ -25,6 +25,11 @@ The place where x and z are reseted to 0 is starting of the other layer.
 
 # version 2.0 uses guillotine algorithm(Guillotine split placement) to place packets in one layer
 
+In 2D guillotine algorithm places a 2D box in lower left corner of the triangle and divide the remaining 
+ L Shaped area into two seperate rectangles.This Is used for placement of boxes in each layer.
+ using this algorithm we we able to improve efficiency of packing quite a bit.<br />
+ <br />
+
 to run version 2.0run command<br /><br />
   node version2.0 > output.txt.
 
