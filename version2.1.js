@@ -246,7 +246,8 @@ var layer= async function(){
     var priIndex=10;  
     setPriority(priIndex);
         var unpacked=[];       ;
-        var layerFlag=0;       
+        var layerFlag=0;    
+        var zflag=0;   
     while(priIndex>0)
     {
         layerFlag=1;
@@ -255,7 +256,18 @@ var layer= async function(){
             layerFlag=0;
             var rectangle;
             for(var j=0;j<currBoxList.length;j++)
-            { 
+            {
+                
+                if(zflag==1)
+                {
+                    if(vol==currBoxList.length)
+                    {
+                        console.log("PROBLEMMMMMMMMMMMMMMMMMM");
+                        console.log(currBoxList.length)
+                     //   return
+                    }
+                    zflag=0;
+                } 
 
                 element=currBoxList[j];
                 //////////////////////////////////////////////////////////////////////
@@ -645,11 +657,8 @@ var layer= async function(){
                 if(rectIndex==-1) 
                 {
                     palletNo+=1;
-                    insertCrate(palletNo,data.crate[crateIndex].length,data.crate[crateIndex].width,data.crate[crateIndex].height);
-                    console.log("#################################################################################");
-                    console.log("\nInserting new crate",crates.length);
-                    console.log("\n#################################################################################");
-                    rectangle=crates[crates.length-1].rectangles[0];
+            await insertCrate(palletNo,data.crate[crateIndex].length,data.crate[crateIndex].width,data.crate[crateIndex].height);
+                   rectangle=crates[crates.length-1].rectangles[0];
                     var currCrate=crates[crates.length-1];
                     
 
@@ -852,7 +861,7 @@ var layer= async function(){
                             crates[finalCrate].yHighest=final.packy;
                         }
                         let rect=crates[finalCrate].rectangles[rectIndex];
-                        console.log("Inside pallet no :",finalCrate+1);
+                        console.log("Inside pallet no :",crates[finalCrate].palletNo);
                         console.log("SKU: "+element.SKU+" Place all "+element.quantity+
                                     " packets from x= "+rect.xStart.toFixed(1)+" z= "+rect.zStart.toFixed(1));
                         console.log("In Orientation X= "+final.packx.toFixed(1)+" z = "+final.packz.toFixed(1));
@@ -884,16 +893,17 @@ var layer= async function(){
                            el.packz=final.packz; 
                             crates[finalCrate].boxList.push(el);
                         element.quantity=element.quantity-final.quantity;
+                        console.log(currBoxList.length);
                        currBoxList.push(element);
-                      
-
+                       console.log(currBoxList.length);
+                       
+                       zflag=1;
+                       vol=currBoxList.length;
                     }
                     else
                     {
                       cannotBePacked.push(element)
                     }
-                 
-
             }
                 
              
