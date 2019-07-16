@@ -24,7 +24,7 @@ var insertCrate=function(palletNo,x,z,y)
     var newCrate={
         palletNo:palletNo,
         xRemaining:x,
-        yRemainig:y,
+        yRemaining:y,
         zRemaining :z,
         maxX:x,
         maxZ:z,
@@ -64,7 +64,7 @@ var findCrate = function()
 }
 var addNewLayer= function(crate)
 {
-    crate.yRemainig-=crate.yHighest;
+    crate.yRemaining-=crate.yHighest;
     crate.yHighest=0;
     crate.xRemaining=crate.maxX;
     crate.zRemaining=crate.maxZ;
@@ -229,7 +229,7 @@ var again=function(sku)
 ///////////EXECUTION//////////////
 //////////////////////////////////
 var vol
-var layer= function(){
+var layer= async function(){
 
 
     findCrate();
@@ -258,7 +258,7 @@ var layer= function(){
                 //////////////////////////////////////////////////////////////////////
                 ////////////Check why element is coming again////////////////////////
                 /////////////////////////////////////////////////////////////////////
-                if(again(element.SKU))
+                if(await again(element.SKU))
                     {
                         continue;
                     }
@@ -275,7 +275,7 @@ var layer= function(){
                 for(var chosenCreate=0;chosenCreate<crates.length;chosenCreate++)
                 {
                     var currCrate=crates[chosenCreate];
-                    if(currCrate.yRemainig < (Math.min(element.length,element.width,element.height)) )       ////////We could Do 0 here lets try later
+                    if(currCrate.yRemaining < (Math.min(element.length,element.width,element.height)) )       ////////We could Do 0 here lets try later
                     continue;
                     
                     for (var ind=0;ind<currCrate.rectangles.length;ind++)
@@ -290,7 +290,7 @@ var layer= function(){
                             zStart=rectangle.zStart;
                             zEnd=rectangle.zEnd;
 
-                            if(element.width<=currCrate.yRemainig)
+                            if(element.width<=currCrate.yRemaining)
                             {
 
                                 or11=findQuantity(xEnd-xStart,zEnd-zStart,element.length,element.height,element.quantity);
@@ -630,8 +630,8 @@ var layer= function(){
                             ////inserting new layer actually
                             if(rectIndex!=-1)
                             {
-                                console.log("Added new permanent layer")
                                 crates[chosenCreate]=addNewLayer(currCrate);
+                                console.log("Added new permanent layer  Y Remaining:",crates[chosenCreate].yRemaining )
                                 rectIndex=0;
                                 console.log(rectIndex)
                                 break;
@@ -649,6 +649,7 @@ var layer= function(){
                     console.log(crates[crates.length-1]);
                     console.log("Inserting new crate",crates.length);
                     rectangle=crates[crates.length-1].rectangles[0];
+                    var currCrate=crates[crates.length-1];
                     
 
                     if(rectangle.area >= element.area)
@@ -658,10 +659,9 @@ var layer= function(){
                         xEnd=rectangle.xEnd;
                         zStart=rectangle.zStart;
                         zEnd=rectangle.zEnd;
-
+                        console.log(currCrate)
                         if(element.width<=currCrate.yRemaining)
                         {
-
                             or11=findQuantity(xEnd-xStart,zEnd-zStart,element.length,element.height,element.quantity);
                                 if(or11.quantity==element.quantity)
                                 {
@@ -835,7 +835,9 @@ var layer= function(){
                     rectIndex=0;
 
                 }
-                    if(final.quantity == element.quantity)
+
+                //Checking if whole quantity can be accomodated or not
+                    if(final.quantity == element.quantity && element.quantity>0)
                     {  
                         vol+=element.quantity*(final.packx*final.packy*final.packz);
                         crates[finalCrate].vol -=element.quantity*(final.packx*final.packy*final.packz);
@@ -849,7 +851,7 @@ var layer= function(){
                             crates[finalCrate].yHighest=final.packy;
                         }
                         let rect=crates[finalCrate].rectangles[rectIndex];
-                        console.log(rect,rectIndex,crates[finalCrate].rectangles.length);
+                        console.log("Inside pallet no :",finalCrate+1);
                         console.log("SKU: "+element.SKU+" Place all "+element.quantity+
                                     " packets from x= "+rect.xStart.toFixed(1)+" z= "+rect.zStart.toFixed(1));
                         console.log("In Orientation X= "+final.packx.toFixed(1)+" z = "+final.packz.toFixed(1));
@@ -867,21 +869,24 @@ var layer= function(){
                             crates[finalCrate].yHighest=final.packy;
                         }
                         let rect=crates[finalCrate].rectangles[rectIndex];
-                        console.log("SKU: "+element.SKU+" Place ONLY "+element.quantity+
+                        console.log("Inside Pallet No :",palletNo+1);
+                        console.log("SKU: "+element.SKU+" Place ONLY "+final.quantity+
                                     " packets from x= "+rect.xStart.toFixed(1)+" z= "+rect.zStart.toFixed(1));
                         console.log("In Orientation X= "+final.packx.toFixed(1)+" z = "+final.packz.toFixed(1));
                         console.log("..")
                         crates[finalCrate].rectangles=rectReplace(crates[finalCrate].rectangles,rectIndex,final);
-                        let el=element;
-                            el.quantity=final.quantity; 
+                        var el={...element};
+                           el.quantity=final.quantity; 
                             crates[finalCrate].boxList.push(el);
                         element.quantity=element.quantity-final.quantity;
-                        unpacked.push(element);
+                      // currBoxList.push(element);
+
                     }
                     else
                     {
-                        unpacked.push(element);
+                      cannotBePacked.push(element)
                     }
+                 
 
             }
                 
@@ -889,6 +894,8 @@ var layer= function(){
         }
         if(unpacked.length!=0)
             {
+                console.log(unpacked)
+                return;
                 unpacked.forEach(element=>{
                     cannotBePacked.push(element);
                 })
@@ -911,6 +918,7 @@ var layer= function(){
     console.log("* No of pallets in most efficient case : ",totalVol/data.crate[crateIndex].vol,"\t*");
     console.log("*****************************************************************");
     console.log(data.box.length)
+    
 }
 
 layer()
