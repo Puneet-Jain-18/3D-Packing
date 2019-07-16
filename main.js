@@ -194,7 +194,7 @@ var layer= function(){
                     " Area= "+palArea.toFixed(1));
                     console.log(".");
                     element.quantity-=n;
-                    currBoxList.push(element);
+                    unpacked.push(element);
                     pFlag=1;
                 }
                 else

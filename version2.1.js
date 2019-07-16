@@ -884,8 +884,8 @@ var layer= async function(){
                            el.packz=final.packz; 
                             crates[finalCrate].boxList.push(el);
                         element.quantity=element.quantity-final.quantity;
-                      // currBoxList.push(element);
-                      cannotBePacked.push(element)
+                       currBoxList.push(element);
+                      
 
                     }
                     else
