@@ -11,7 +11,7 @@ currently it follows layer in layer and shelf based approach to assign places to
 3. npm install
 4. node main > output.txt
 
-#output.txt file would be created where each object details could be seen
+# output.txt file would be created where each object details could be seen
   a.SKU 
   b.placement  starting position
   c.orientation in which it is placed.
@@ -19,7 +19,7 @@ currently it follows layer in layer and shelf based approach to assign places to
 It is to be noted that the products printed first correspond to the first(lowest) layer in the pallet
 The place where x and z are reseted to 0 is starting of the other layer.
 
-#version 2.0 uses guillotine algorithm(Guillotine split placement) to place packets in one layer
+# version 2.0 uses guillotine algorithm(Guillotine split placement) to place packets in one layer
 
 to run version 2.0run command
   node version2.0 > output.txt.
@@ -29,7 +29,7 @@ I am more confident that the output here is correct and implementable.
 
 different pallet no are dispayed to denote starting of a new pallet.
 
-#version 2.1 takes guillotine algorithm one step further.
+# version 2.1 takes guillotine algorithm one step further.
 
 In version 2.1 all the pallets are considered for placement for each box simultaniously.
 ie, the pallet strting from smallest remaining volume are examined first. 
@@ -46,7 +46,7 @@ ShortComings: The packing of each layer is optimized using guillotine algorithm 
               we still clip each layer on the basis of highest box placed in that layer.
 
 
-#Future Work
+# Future Work
 consider implementing guillotine algorithm in 3-D
 
 currently in 2D guillotine algorithm places a 2D box in lower left corner of the triangle and divide the remaining 
