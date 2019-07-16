@@ -235,6 +235,10 @@ var layer= async function(){
     findCrate();
     var quantity=0,palletNo=1;
     insertCrate(palletNo,data.crate[crateIndex].length,data.crate[crateIndex].width,data.crate[crateIndex].height);
+
+    console.log("::::::Welcome to pallet packing ::::::")
+    console.log("\n\n Please place the number boxes displayed along the X-axis of the pallet. ")
+    console.log("Move to A upper row if row is full. \n");
     console.log("###################################################################################")
     console.log("Adding Pallet No :",palletNo);
     console.log("###################################################################################")
@@ -246,7 +250,6 @@ var layer= async function(){
     while(priIndex>0)
     {
         layerFlag=1;
-        console.log("AAAAAAAAAAAAAAA",priIndex);
         while(layerFlag)
         {
             layerFlag=0;
@@ -457,11 +460,8 @@ var layer= async function(){
                     //Addition of  new layer  working properly  :) 
                     if(rectIndex==-1)       
                     {
-                        console.log(rectIndex,found)
-                        console.log("Trying to add new temporary layer")
                         var temp=addNewLayer(currCrate);
                         var rectangle=temp.rectangles[0];
-                        console.log(rectangle);
                         if(rectangle.area >= element.area)
                         {
 
@@ -625,15 +625,15 @@ var layer= async function(){
                                     }
                                 }
                             }
-                            console.log(rectIndex,found);
 
                             ////inserting new layer actually
                             if(rectIndex!=-1)
                             {
                                 crates[chosenCreate]=addNewLayer(currCrate);
-                                console.log("Added new permanent layer  Y Remaining:",crates[chosenCreate].yRemaining )
+                                console.log("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+                                console.log("\nAdd new  layer in pallet NO", chosenCreate+1 ," Y Remaining:",crates[chosenCreate].yRemaining )
+                                console.log("\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
                                 rectIndex=0;
-                                console.log(rectIndex)
                                 break;
                             }
                         }
@@ -646,8 +646,9 @@ var layer= async function(){
                 {
                     palletNo+=1;
                     insertCrate(palletNo,data.crate[crateIndex].length,data.crate[crateIndex].width,data.crate[crateIndex].height);
-                    console.log(crates[crates.length-1]);
-                    console.log("Inserting new crate",crates.length);
+                    console.log("#################################################################################");
+                    console.log("\nInserting new crate",crates.length);
+                    console.log("\n#################################################################################");
                     rectangle=crates[crates.length-1].rectangles[0];
                     var currCrate=crates[crates.length-1];
                     
@@ -659,7 +660,6 @@ var layer= async function(){
                         xEnd=rectangle.xEnd;
                         zStart=rectangle.zStart;
                         zEnd=rectangle.zEnd;
-                        console.log(currCrate)
                         if(element.width<=currCrate.yRemaining)
                         {
                             or11=findQuantity(xEnd-xStart,zEnd-zStart,element.length,element.height,element.quantity);
@@ -814,15 +814,16 @@ var layer= async function(){
                                 }
                             }
                         }
-                        console.log(rectIndex,found);
 
                         ////inserting new layer actually
                         if(rectIndex!=-1)
                         {
-                            console.log("Added new permanent layer")
+                            
                             crates[chosenCreate]=addNewLayer(currCrate);
+                            console.log("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+                            console.log("\nAdd new  layer in pallet NO", chosenCreate+1 ," Y Remaining:",crates[chosenCreate].yRemaining )
+                            console.log("\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
                             rectIndex=0;
-                            console.log(rectIndex)
                             break;
                         }
                     }
@@ -869,17 +870,22 @@ var layer= async function(){
                             crates[finalCrate].yHighest=final.packy;
                         }
                         let rect=crates[finalCrate].rectangles[rectIndex];
+
+
                         console.log("Inside Pallet No :",palletNo+1);
                         console.log("SKU: "+element.SKU+" Place ONLY "+final.quantity+
-                                    " packets from x= "+rect.xStart.toFixed(1)+" z= "+rect.zStart.toFixed(1));
+                                    " packets  starting from x= "+rect.xStart.toFixed(1)+" z= "+rect.zStart.toFixed(1));
                         console.log("In Orientation X= "+final.packx.toFixed(1)+" z = "+final.packz.toFixed(1));
                         console.log("..")
                         crates[finalCrate].rectangles=rectReplace(crates[finalCrate].rectangles,rectIndex,final);
                         var el={...element};
-                           el.quantity=final.quantity; 
+                           el.quantity=final.quantity;
+                           el.packx=final.packx;
+                           el.packz=final.packz; 
                             crates[finalCrate].boxList.push(el);
                         element.quantity=element.quantity-final.quantity;
                       // currBoxList.push(element);
+                      cannotBePacked.push(element)
 
                     }
                     else
@@ -894,8 +900,6 @@ var layer= async function(){
         }
         if(unpacked.length!=0)
             {
-                console.log(unpacked)
-                return;
                 unpacked.forEach(element=>{
                     cannotBePacked.push(element);
                 })
@@ -911,7 +915,6 @@ var layer= async function(){
     console.log("Total quantity packed = ",quantity);
     console.log("Remaining to be packed = ", cannotBePacked.length);
  
-    console.log(data.crate[crateIndex]);
     console.log("")
     console.log("*****************************************************************");
     console.log("* No of pallets used : ",palletNo,"\t\t\t\t\t*")
