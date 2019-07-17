@@ -2,6 +2,7 @@
 
 
  Please place the number boxes displayed along the X-axis of the pallet. 
+Keep placing the boxes until end of pallet is reached.then start a new line
 Move to A upper row if row is full. 
 
 ###################################################################################

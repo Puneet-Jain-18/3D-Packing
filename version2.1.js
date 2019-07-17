@@ -238,6 +238,7 @@ var layer= async function(){
 
     console.log("::::::Welcome to pallet packing ::::::")
     console.log("\n\n Please place the number boxes displayed along the X-axis of the pallet. ")
+    console.log("Keep placing the boxes until end of pallet is reached.then start a new line")
     console.log("Move to A upper row if row is full. \n");
     console.log("###################################################################################")
     console.log("Adding Pallet No :",palletNo);
