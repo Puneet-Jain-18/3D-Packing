@@ -9,6 +9,10 @@ Whole program follow layer in layer approach.<br />
 ie, no new layer is started until one layer is complete witin a pallet.
 once the above layer has started filling, items could not be added to lower layers.
 
+We would be considering higher number as lower priority.<br />
+so item with priority 10 cannot be placed on priority 8.<br />
+item with priority 2 can be placed on item with priority 3 to 10.<br />
+
 # to run this program
 1. install node js on your system from site : https://nodejs.org/en/
 2. go to terminal clone this repository.  
