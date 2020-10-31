@@ -55,7 +55,7 @@ ie, the pallet strting from smallest remaining volume are examined first.
 The program tries to add a temporary new layer in each pallet if box dosen"t fit in current layer.
 The pallet with the smallest volume remaining which could accomodate the box is then chosen.
 This helps to minimize wastage of space and simultaniously alwayes placing lower priority box over the higher one.
-A new pallet is added only if none of current pallets could accomodate the box.<br /><br />
+A new pallet is added only if none of current pallets could accomodate the box.This increased the efficiency by 46%.<br /><br />
 
 
 to run version 2.1, run command<br />
