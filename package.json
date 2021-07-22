@@ -6,7 +6,7 @@
   "dependencies": {
     "nodemon": "^1.19.1",
     "read-excel-file": "^4.0.1",
-    "xlsx": "^0.14.3"
+    "xlsx": "^0.17.0"
   },
   "devDependencies": {},
   "scripts": {
